@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html class="element" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta lang="en" />
+    <meta name="description" content="Analysis of Anna University IRINS data." />
+    <meta name="viewport" content="initial-scale=1" />
+    <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
+    <link rel="stylesheet" href="../css/latex.css" />
+    <title>Analysis and Quantification of the R&D strengths of different Areas and different Faculty Members in a
+        University</title>
+
+</head>
+
+<body>
+    <nav>
+        <a href="../index.html">Home Page</a>
+    </nav>
+    <header style="text-align: center;">
+        <h2><em>III. Obtaining the R&D Profile of a university using the IRINS database</em></h2>
+    </header>
+
+
+    <article style="text-align: justify;">
+        <p>Most universities do not have a centralised on line database of its faculty members and their profiles made
+            available over the web.
+            Faculty members however do maintain their personal webpages as a part of their Department/Centre websites,
+            and anyone wanting
+            to analyse the R&D profiles of the faculty members of the university has to go to these Department/Centre
+            websites and pull out
+            the required information from the individual faculty web pages available there. This is a very tedious
+            process, and
+            often the individual pages of many faculty members are also incomplete in many regards for our purposes.</p>
+
+        <h4><em>The IRINS Database:</em></h4>
+
+        <p>
+            IRINS <a href="https://irins.org/irins/">(https://irins.org/irins/)</a> is a web-based Research Information
+            Management (RIM)
+            service developed recently by the Information and Library Network(INFLIBNET) Centre Delhi in collaboration
+            with the Central
+            University of Punjab. Anna University has populated the template supplied by IRINS with data of
+            about 500 of its regular faculty, and is available at <a
+                hre="https://annauniv.irins.org/">https://annauniv.irins.org/</a>
+        </p>
+
+        <p>
+            Nearly 250 universities and institutes in India (Central government, State government as well as Private)
+            have
+            created their own versions of IRINS data bases, and this to our knowledge represents only one such
+            instance that is available for public viewing and access at present.
+        </p>
+
+        <p>
+            Even though there is provision to add more fields as desired by the individual faculty members,
+            most of the IRINS websites of universities have chosen to have only a few fields populated;
+            in case of Anna University, only the following fields have been filled up by most of the 500 faculty
+            members:
+        </p>
+        <ul>
+            <li>Personal Information</li>
+            <li>Expertise</li>
+            <li>Experience</li>
+            <li>Educational Qualifications</li>
+            <li>Publications</li>
+        </ul>
+
+        <p>
+            List of Publications however looks quite incomplete as well as defective in many cases and may not be much
+            usable as it is. More importantly, the following information is not available in most cases, which are
+            essential for our purpose of computing R&D strength as discussed earlier:
+        </p>
+        <ul>
+            <li>Externally funded activities taken up such as Sponsored R&D, Consultancy, Training etc.</li>
+            <li>Titles of Ph. D. Theses supervised</li>
+            <li>Technologies/ IP s/ Patents produced</li>
+            <li>Conferences Organised</li>
+            <li>Networking & Collaborations</li>
+            <li>Specialised Courses taught</li>
+            <li>etc.</li>
+        </ul>
+
+        <p>
+            Thus, the IRINS database in the form as presently available in many cases such as Anna University is still
+            quite removed from the comprehensive ones needed as mentioned earlier, though it is a good beginning
+            and could be improved up on by interested institutions.</p>
+
+        <p>
+            For our purpose of computing the R&D strengths, the “Areas of Expertise” field filled up by the faculty
+            members in IRINS is quite useful and usable directly. This is where the faculty members enter their
+            broad areas of activity (“Aerospace”) as well as specialised R&D areas (“Propulsion”), and as mentioned
+            in <a href="part2.html#II.1">(II)(1)</a> above, these entries provide a very good starting point to identify
+            the
+            Areas of Specialisation that would be relevant to a given university.
+        </p>
+
+        <h4><em>Use of the IRINS Database:</em></h4>
+
+        <p>
+            After a preliminary clean-up of the IRINS data (taking care of singular/plural, acronyms, morphed phrases
+            etc)
+            a total of 943 distinct names of R&D areas (Topics of Specialistion) were identified for Anna University
+            faculty
+            from the IRINS data base, as supplied by about 500 faculty members. (The number of areas mentioned by one
+            faculty
+            varies hugely, from 2 to 7-8). These 943 items were divided into three broad Domains as below as felt
+            appropriate for Anna University, shown along with the number of topics of specialisation for each domain:
+        </p>
+        <ol>
+            <li>Electrical and Computing Sciences (E&C): 292 topics</li>
+            <li>Non- E&C: 533 topics</li>
+            <li>Mathematics, Sciences & Humanities, and Management (MSHM): 118 topics</li>
+        </ol>
+
+        <p>
+            The major exercise involved next was the clustering of these 943 items into a set of Clusters or Areas of
+            Specialisation,
+            the number of such sets being neither too large (dividing items that should be in one set into many sets;
+            too fine a
+            granularity), nor too small ( set including items that should in reality belong to other sets; too coarse a
+            granularity).
+            It requires good domain knowledge to know which items in the list of 943 topics belong to a particular
+            cluster or area of
+            specialisation, and can be done either manually or through a Machine Learning (ML) approach, or in a hybrid
+            manner
+            combining these two methods. Since 943 items is still relatively small, the manual approach was chosen here
+            initially
+            to validate the key ideas behind this investigation, and ML approach would be developed later and reported
+            here.
+        </p>
+
+        <p>
+            Even in the manual approach used here, experts from different domains are needed to correctly assign the 943
+            items
+            (topics of specialisation) into appropriate set of clusters (areas of specialisation). This process however
+            has
+            large time and cost implications, and so for demo purposes here the authors have carried out the clustering
+            task
+            on their own based on their understanding of the domains involved. It is thus likely to turn out that the
+            number
+            and choice of clusters given here are more appropriate to the domain of E&C rather than the other two
+            domains.
+            This is only to validate the key ideas behind this pilot study, and a more detailed and accurate approach
+            involving other experts is needed to make these results more accurate and meaningful.
+        </p>
+
+        <p>
+            Looking through the list of items in each of the three broad domains identified above, we divided them into
+            30 clusters or areas of specialisation as below:
+        </p>
+
+        <ol type="A">
+            <li>
+                E&C Domain: 10 areas or clusters as below -
+                <ul>
+                    <li>AI/ML</li>
+                    <li>Cloud/Grid Computing</li>
+                    <li>Communications</li>
+                    <li>Computers</li>
+                    <li>Electronics</li>
+                    <li>Instrumentation/Control /Automation</li>
+                    <li>Networks</li>
+                    <li>Power & High Voltage</li>
+                    <li>Signal/Image Processing</li>
+                    <li>VLSI</li>
+                </ul>
+            </li>
+            <li>
+                Non-E&C Domain: 17 areas or clusters as below -
+                <ul>
+                    <li>Aerospace</li>
+                    <li>Alternate Energy</li>
+                    <li>Architecture</li>
+                    <li>Automobiles</li>
+                    <li>Biological/Medical</li>
+                    <li>Chemical Engg.</li>
+                    <li>Civil Engg.</li>
+                    <li>Environment</li>
+                    <li>Manufacturing</li>
+                    <li>Material Sciences</li>
+                    <li>Mechanical Engg.</li>
+                    <li>Mining</li>
+                    <li>Polymers/Rubber/Ceramics</li>
+                    <li>Printing</li>
+                    <li>Remote Sensing/GIS</li>
+                    <li>Water</li>
+                    <li>Textiles</li>
+                </ul>
+            </li>
+            <li>
+                Maths, Sciences & Humanities and Management Domains: 3 areas or clusters as below -
+                <ul>
+                    <li>Mathematics</li>
+                    <li>Sciences & Humanities</li>
+                    <li>Management</li>
+                </ul>
+            </li>
+        </ol>
+
+        <p>
+            The organisation of information used in this study is thus as follows:
+        </p>
+    </article>
+
+    <article>
+        <div style="text-align: center;">
+            <h4>3 domains</h4>
+            <figure>
+                <img src="../images/down.png" width="5%">
+            </figure>
+            <h4>30 Clusters or Areas of Specialisation</h4>
+            <figure>
+                <img src="../images/down.png" width="5%">
+            </figure>
+            <h4>943 Topics of Specialisation</h4>
+        </div>
+    </article>
+
+</body>
+
+</html>
