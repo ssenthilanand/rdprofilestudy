@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="element" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta lang="en" />
+    <meta name="description" content="Analysis of Anna University IRINS data." />
+    <meta name="viewport" content="initial-scale=1" />
+    <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
+    <link rel="stylesheet" href="../css/latex.css" />
+    <title>Analysis and Quantification of the R&D strengths of different Areas and different Faculty Members in a
+        University</title>
+</head>
+
+<body>
+    <nav>
+        <a href="../index.html">Home Page</a>
+    </nav>
+    <header style="text-align: center;">
+        <h2><em>IV. Some preliminary results for Anna University</em></h2>
+    </header>
+    <article style="text-align: justify;">
+
+        <p>
+            Some preliminary results of our work done so far are given here <a
+                href="https://ssenthilanand.github.io/irinsanalysis/">
+                (https://ssenthilanand.github.io/irinsanalysis/)</a>
+            where the 30 areas are arranged into four layers according to the number of faculty involved in each of
+            them, as
+            below:
+        </p>
+
+        <p>
+            <em>Top row:</em> Areas having Faculty strength above 75 each (the maximum is seen to be 82)<br>
+            <em>Second from top row:</em> Faculty strength in the range 51 to 75<br>
+            <em>Third from top row:</em> Faculty strength in the range 26 to 50<br>
+            <em>Bottom row:</em> Faculty strength in the range 1 t0 25 (the lowest is 5)<br>
+        </p>
+
+        <p>
+            Each of the 3 broad domains (A,B and C) is shown in one colour. The size of the circle is proportional
+            to the logarithm of the faculty strength, making the circle having the largest number the biggest, and
+            the circle having the least number of faculty as the smallest. On clicking the circles, details of their
+            sub areas (topics) and faculty list are displayed, with the faculty names being linked to their IRINS
+            database entries.
+        </p>
+
+        <p>
+            There is also a provision made for searching for a required topic of specialisation by clicking 
+            <a href="https://ssenthilanand.github.io/irinsanalysis/search.html">here</a> which returns 
+            the list of faculty members involved in that area, linked to their IRINS web pages.
+        </p>
+
+        <p>
+            It is emphasised here again that these results are shown only as a PoC, and considerably more work 
+            needs to be done to make it more effective and useful. For instance, areas like Mechanical, Computers 
+            etc are really not specialisations (as in the sense of Mining or Grid/Cloud Computing), and these 
+            will have to be examined as to how and where the items under them can be re-assigned to 
+            existing Areas of specialisations, or to new Areas of specialisations.
+        </p>
+
+        <p>
+            Also, ordering the Areas (Clusters) in terms of their faculty strengths as shown in the figure is 
+            not particularly useful since more faculty does not necessarily mean higher R&D strengths. 
+            R&D strengths of different Areas (Clusters) have to be computed using the methods suggested in 
+            <a href="part2.html">Section II</a> above, and then ranked accordingly. Unfortunately, IRINS database is not of much use 
+            in this regard as mentioned earlier. This will have to be done afresh using techniques of web crawling, 
+            information extraction etc from the primary sources of information available elsewhere for the 
+            common metrices like Publications, Research Grants, Patents, Theses, etc.
+        </p>
+    </article>
+</body>
+
+</html>
