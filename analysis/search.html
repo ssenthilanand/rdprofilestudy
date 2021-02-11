@@ -6676,7 +6676,7 @@ function filter(evt) {
       if(abbr[inpv] && (slcOperators == "*"))
         var query = slcOperators + abbr[inpv];
       else
-        var query = "{"  + inpv;
+        var query = slcOperators  + inpv;
       //console.log(query);
 
       // Set the column's filter value
