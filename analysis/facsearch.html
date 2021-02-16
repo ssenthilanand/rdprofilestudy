@@ -1,0 +1,2135 @@
+<!DOCTYPE html>
+<html class="element" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta lang="en" />
+  <meta name="description" content="Analysis of Anna University IRINS data." />
+  <meta name="viewport" content="initial-scale=1" />
+  <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
+  <link rel="stylesheet" href="css/sakura.css" />
+  <title>Anna University Chennai Research Ranking</title>
+  <link rel="stylesheet" type="text/css" href="tablefilter/style/tablefilter.css" />
+  <style>
+    /**
+     * Custom CSS definitions as per TableFilter configuration
+     */
+    .myLoader {
+      position: absolute;
+      padding: 5px;
+      margin: 100px 0 0 5%;
+      width: auto;
+      z-index: 1000;
+      font-size: 12px;
+      font-weight: bold;
+      border: 1px solid #666;
+      background: #ffffcc;
+      vertical-align: middle;
+    }
+
+    .myStatus {
+      width: auto;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <header style="text-align: center;">
+    <h2>Major Areas of R&D Specialisation in Anna University.</h2>
+    <strong><h4>The Faculty Search</h4></strong>
+  </header>
+
+  <br>
+      Enter the name of the faculty you want to search inside the search box. The search will return the areas of interest of the selected faculty members, linked to their IRINS pages.
+  <br>
+  <br>
+
+  <form class="navbar-form navbar-left" onsubmit="filter(event);">
+    <div class="input-group" style="text-align: center;">
+        <label for="slcOperators">Search for Faculty</label>
+        <input name="inpSearch" type="text" class="form-control" onfocus="this.value=''" placeholder="Search" autofocus>
+        <button type="submit" class="btn btn-default">Search</button>
+        <button type="reset" class="btn btn-link" onclick="tf.clearFilters();">Clear</button>
+        <button type="reset" class="btn btn-link" onclick="window.history.back();">Return</button>
+    </div>
+  </form>
+
+  <script src="tablefilter/tablefilter.js"></script>
+  <div id="filtersToggle" style="visibility: hidden;"></div>
+
+
+  <table id="aoi-table" class="aoi-table" style="text-align: left;">
+    <thead style="text-align:center">
+        <th><strong>Faculty</strong></th>
+        <th>Area of Interest</th>
+    </thead>
+    <tr>
+        <td><a href=https://annauniv.irins.org/profile/117861>Abirami S</a></td>
+        <td>Image Processing<br>Natural Language Processing<br>Artificial Intelligence<br>Video Analytics<br>Data Analytics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57335>Adaikkalam Vellaichamy</a></td>
+        <td>Proteomics and Allied Omics Sciences<br>Biological Mass spectrometry<br>Biomarker Discovery for Human Diseases<br>Cancer Biology<br>Bio Nanotechnology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117934>Akila R</a></td>
+        <td>Fluid Dynamics and Image Processing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/169024>Akila R</a></td>
+        <td>Image Processing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/61147>Alagar Muthukaruppan</a></td>
+        <td>Industrial Polymers<br>Polymer Blends<br>Nanocomposites<br>POSS Hybrid Polymers<br>Drug Delivery System<br>Fuel Cells and Biosensors</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117640>Amal Raj S</a></td>
+        <td>Environmental Modelling including Ecosystem Modelling<br>Biological Process Modelling and Kinetics of Waste Water Treatment</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117651>Ambujam N K</a></td>
+        <td>Agricultural Engineering<br>Integrated Water Resource Management<br>Wastewater Reuse</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117879>Anandhakumar P</a></td>
+        <td>Networks<br>Digital Image Processing<br>Artificial Intelligence<br>Computer Vision<br>Robotics<br>Multimedia Networks<br>Multimedia Data Structures<br>Artificial Neural Networks</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117701>Anandkumar G</a></td>
+        <td>Internal Combustion Engines</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117930>Anbarasu Sivalingam</a></td>
+        <td>DNA Computing<br>Queueing Models<br>Theoretical Computer Science</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118035>Anbuchelian S</a></td>
+        <td>Wireless Sensor Networks<br>Computer Networks<br>Machine Learning<br>Data Analytics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117782>Anbuselvi S V</a></td>
+        <td>Power systems Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117744>Angelin Gladston</a></td>
+        <td>Software Engineering<br>Testing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117675>Anitha G</a></td>
+        <td>Navigation Guidance and Control<br>Image Processing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117700>Annamalai</a></td>
+        <td>Engine and Emission Control<br>Alternate Fuels<br>Automotive Chassis</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57334>Anuradha Dhanasekaran</a></td>
+        <td>Apoptosis<br>Cell Signalling<br>Stem Cell Technology<br>Angiogenesis<br>Hypoxia<br>Cardiovascular Therapy</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117932>Arivudainambi D</a></td>
+        <td>Computer Networks<br>Queueing Thoery<br>Stochastic Processes and its Applications<br>Operations Research<br>Cloud Computing<br>Wireless Sensor Networks<br>Evolutionary Algorithms<br>Adhoc Networks</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117754>Arockia Xavier Annie R</a></td>
+        <td>Machine Learning<br>Artificial Intelligence<br>Information Security<br>Compilers<br>Multimedia networks<br>P2P<br>Video Image Processing<br>Algorithms and Data structures<br>Information Management</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117699>Arul Selvan S</a></td>
+        <td>Alternative Fuels in Engines<br>Vehicle Air Conditioning<br>Control for Automobile Applications<br>Smart Mobility and Electric Vehicles</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117735>Arul Siromoney</a></td>
+        <td>Software Engineering<br>AI<br>Bio-Medical Engineering<br>Mobile Computing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117644>Arulmozhi</a></td>
+        <td>Environmental Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118006>Arulmozhi R</a></td>
+        <td>Environmental Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/36610>Arumaikkannu Ganesan</a></td>
+        <td>Additive Manufacturing<br>3D Printing<br>Bio-Additive Manufacturing<br>Design for Additive Manufacturing<br>Multi Material Design and Analysis<br>AM Applications<br>AM Quality</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117678>Arumugam V</a></td>
+        <td>Composite Materials<br>NDT<br>Flight Mechanics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117941>Aruna P</a></td>
+        <td>Medical Imaging<br>Brachytherapy<br>Nano Photonics<br>Ultrasonics and Montecarlo Simulation</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117698>Arunachalam K</a></td>
+        <td>Active Suspension System<br>Automotive Eletronics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117652>Arunbabu E</a></td>
+        <td>Water Resources</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117711>Ashok Kumar S</a></td>
+        <td>Biotechnology and Applied Microbiology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/36609>Azad A</a></td>
+        <td>Quality Management<br>Flexible Manufacturing Systems and Reliability Engineering<br>Quality Management<br>Flexible Manufacturing Systems and Reliability Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117984>Balachander P</a></td>
+        <td>Refrigeration and Air Conditioning</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117945>Balamadeswaran P</a></td>
+        <td>Deep Sea Mining Technology<br>Surface and Underwater Blasting Technology<br>Surface Mining<br>Mine Economics and Mine Safety</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57443>Balamurugan Chinnasamy</a></td>
+        <td>CAD CAM</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117842>Balamurugan G</a></td>
+        <td>Communication Systems</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/49781>Balamurugan Pillai K</a></td>
+        <td>I AM IN NEED OF ALL CATEGORY IN UR NETWORK</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117667>Balamurugan R</a></td>
+        <td>Systems Analysis in Water Resources and Irrigation Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57472>Balasivanandha Prabu Shanmugavel</a></td>
+        <td>Composite Materials<br>Severe Plastic Deformation<br>Cermet<br>Mechanical Behaviour of Materials</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117643>Balasubramanian Manimekalai</a></td>
+        <td>Solid Waste Management<br>Wastewater Treatment</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117732>Balasubramanian N</a></td>
+        <td>Hybrid Membrane bioreactor<br>Battery and Fuel Cell<br>Graphene Based Polymer Nanocomposite for Energy Storage<br>Capacitive Deionization<br>Graphene Based Biomaterials<br>Electrochemical Treatment of Industrial Effluent<br>HAZOP and Fault Tree Analysis<br>Chemical Process Safety</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117862>Bama S</a></td>
+        <td>Computational logic<br>Artificial Intelligence<br>Free and Open Source Software</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117929>Baskar Babujee J</a></td>
+        <td>Graph Theory<br>Formal Languages and Automata Theory.</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57384>Baskaran R</a></td>
+        <td>Scheduling<br>O R Product Design and Development</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/60587>Baskaran Ramachandran</a></td>
+        <td>Database<br>Artificial Intelligence<br>Data Mining<br>Multimedia</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117957>Begam Elavarasi S</a></td>
+        <td>Computational Nano and Bio Physics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57370>Beulah Gnana Ananthi G</a></td>
+        <td>Steel Structures<br>Cold Formed Structures<br>Finite Element Analysis</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117942>Bhagavathiammal G J</a></td>
+        <td>Environmental and Health Sciences<br>Atmospheric Physics<br>Spectroscopy</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117801>Bhagyaveni A</a></td>
+        <td>Wireless Communication and Networking<br>Digital Communication<br>Adhoc Network<br>Wireless Sensor Networks<br>Cognitive Radio Networks</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117940>Bharanidharan G</a></td>
+        <td>Radiation Therapy and Radiation Dosimetry</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117979>Bhaskar G B</a></td>
+        <td>Composite Materials<br>Manufacturing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117830>Bhoopathy Bagan K</a></td>
+        <td>Signal Processing<br>Image Processing<br>Data Compression</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118038>Bhuvaneswaran R S</a></td>
+        <td>Mobile Computing<br>Wireless Sensor Networks<br>Image Security<br>Cryptography</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117829>Bhuvaneswari P T V</a></td>
+        <td>Wireless Sensor Network<br>Wireless Network<br>Wireless Communication</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117756>Bose S</a></td>
+        <td>Networks<br>Web Technology<br>Multimedia Streaming<br>Artificial Intelligence</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117728>Brinda Lakshmi A</a></td>
+        <td>Treatment of Industrial Effluents<br>Ionic Liquids<br>Desulphurization of Liquid Fuels<br>Extraction of Bioactive Compounds from Wastes<br>Biofuel Production from Wastes</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117658>Carolin Arul</a></td>
+        <td>Legal Aspects of Water Resources<br>Integrated Water Resources Management<br>Watershed Conservation Management</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117797>Chandramohan S</a></td>
+        <td>Power System Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/36655>Chandrasekar M</a></td>
+        <td>Computational Fluid Dynamics<br>Fluid Mechanics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117681>Charles Augustin V</a></td>
+        <td>Internal Combustion Engines<br>Alternative Fuels<br>Emission Controls</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117935>Chinnadurai M</a></td>
+        <td>Ordinary Differential Equations</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117953>Chinnakali K</a></td>
+        <td>X-Ray Crystallography and Materials Science</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57357>Chinnaraju K</a></td>
+        <td>Structural Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118037>Chinthamani Chinnaraju</a></td>
+        <td>Wireless Networks</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117725>Chithra Kumaran</a></td>
+        <td>Pollution Control</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117959>Chitra M</a></td>
+        <td>Dielelectrics<br>Lasers and Semiconductors</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117739>Chitrakala S</a></td>
+        <td>Computer Vision<br>Data Mining<br>Information Retrieval</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117933>Cokilavany Diraviam</a></td>
+        <td>Fuzzy Analysis and Its Applications</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117703>Devardjane G</a></td>
+        <td>Automation and Control Systems</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117887>Dhalia Sweetlin J</a></td>
+        <td>Medical Digital Image Processing<br>Bio Inspired Systems</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117881>Dhananjay Kumar</a></td>
+        <td>Mobile Communication and Computing<br>Video Streaming and Analysis</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117683>Dharmendira Kumar M</a></td>
+        <td>Thermodynamics<br>Polymer Composites<br>Environmental Chemistry</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117668>Dheenadhayan J</a></td>
+        <td>Application of Fluid Mechanics and Aerodynamics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117638>Dhinagaran G</a></td>
+        <td>Environmental Engineering<br>Water Quality Modeling<br>Marine Pollution<br>Industrial Wastewater Treatment<br>Remote Sensing and GIS Applications in Environmental Management<br>ANN and Fuzzy Logic Application in Environmental Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117808>Dhurga Devi J</a></td>
+        <td>VLSI<br>Communication Sytems</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57382>Dillibabu Ramalingam</a></td>
+        <td>Quality Management<br>Project Management and Data Science</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117840>Divya A</a></td>
+        <td>Communication Systems</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57543>Easwarakumar K S</a></td>
+        <td>Theoretical Computer Science<br>Molecular Computing<br>Multimedia<br>Network Security</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/18449>Elango Lakshmanan</a></td>
+        <td>Hydrogeochemistry<br>Hydrogeophysics<br>Groundwater Quality<br>Groundwater Modeling<br>Geochemical Modeling<br>Hydrology<br>Water Resources Management<br>Managed Aquifer Recharge<br>Contaminant Transport<br>Radionuclide Transport<br>Groundwater Pollution and Seawater Intrusion</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117687>Elango M</a></td>
+        <td>Sustainable Architecture</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117990>Elangovan K</a></td>
+        <td>Rapid tooling<br>Alternate Material Development for Rapid Tool<br>Polymer Matrix Composites</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57442>Elayaperumal Ayyasamy</a></td>
+        <td>Engineering Design<br>Composites Materials<br>Tribology<br>Surface Engineering<br>Laser Surfacing<br>Electroless Coatings</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117820>Ewins Pon Pushpa S</a></td>
+        <td>Real time Embedded System</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117978>Gajendran S</a></td>
+        <td>Optimisation Techniques<br>Manufacturing Management<br>Quality Control<br>Quality Management<br>Tool Design<br>Metal Forming</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57613>Ganesan S</a></td>
+        <td>Medical Physics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118031>Ganesh Duraisamy</a></td>
+        <td>Internal Combustion Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117793>Ganesh Kumar Srinivasan</a></td>
+        <td>Power Electronics and Drives</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117841>Ganesh Madhan M</a></td>
+        <td>RF and Optical Communication</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117981>Ganesh P</a></td>
+        <td>Metal Forming<br>Incremental Forming<br>Superplastic Forming<br>Finite Element Analysis<br>CIM and Computer Aided Product Design</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117898>Ganesh Ram A</a></td>
+        <td>Process Control</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117960>Geetha D</a></td>
+        <td>Materials Science</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117821>Geetha G</a></td>
+        <td>Optical Communication<br>RF System Design</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117872>Geetha P</a></td>
+        <td>Information Retrieval<br>Theory of Compution<br>DBMS<br>Data Mining</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117741>Geetha Palanisamy</a></td>
+        <td>Image Processing<br>Pattern Recognition</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117865>Geetha Ramani R</a></td>
+        <td>Data Mining<br>Evolutionary Algorithms</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117908>Geetha S N</a></td>
+        <td>Marketing and Financial Management</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118039>George Washington D</a></td>
+        <td>Wireless Networks</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118000>Giridev V R</a></td>
+        <td>Chemical Processing<br>Fibre Science<br>Medical Textiles<br>Composites</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117848>Gitanjali M S</a></td>
+        <td>English Language Testing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57430>Gnanavelbabu A</a></td>
+        <td>High-Temperature Wear and Friction Behaviour of Advanced Materials<br>Machining of Composite Materials<br>Corrosion Behaviour of Materials<br>Development and Characterisation of Aluminium Alloys and Composites<br>Development and Characterisation of Magnesium Alloys and Composites<br>Polymer Composites<br>Lean Manufacturing<br>Value Engineering<br>Supply Chain Management<br>Quality by Design<br>Measurements and Optimization</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117997>Gobi N</a></td>
+        <td>Clothing Science<br>Fibre Science<br>Nano Science and Technology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117724>Gomathi Priya P</a></td>
+        <td>Electrochemical Environmental Technology<br>Effluent Treatment<br>Nano Materials</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117788>Gomathi V</a></td>
+        <td>Power Systems Operation and Control<br>Cloud Computing Service Oriented Architectures<br>State Estimation</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57545>Gopal Tadepalli</a></td>
+        <td>Cyber Physical Systems</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117915>Gowri S</a></td>
+        <td>Micro Machining<br>CAD/CAM<br>High Speed Machining<br>Technical Education System</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117780>Gowri Sree V</a></td>
+        <td>High Voltage Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118008>Greeshma S</a></td>
+        <td>Earthquake Resistant Design<br>Finite Element Analysis<br>Computer Aided Design</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117803>Gunaseelan K</a></td>
+        <td>Wireless Communication<br>Digital Signal processing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118011>Gunasekaran K</a></td>
+        <td>Traffic Engineering and Management <br>Transportation Planning<br>Road Safety</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117759>Gunasekaran R</a></td>
+        <td>5G Networks<br>LTE<br>LTE-Advanced<br>Vehicular Networks<br>Hybrid LiFi/WiFi<br>Wireless Network Security</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117907>Hansa Lysander Manohar</a></td>
+        <td>Knowledge<br>Technology and Sustainability Management</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117913>Hariharan P</a></td>
+        <td>Micro Machining<br>CNC Machine<br>Robotics<br>CAM<br>Machining<br>Surface Engineering<br>Composite</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117721>Helen Kalavathy M</a></td>
+        <td>Mass Transfer<br>Nano Particle Synthesis and Development of Nano Composites<br>Pollution Control and Effluent Treatment</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117885>Hemalatha M</a></td>
+        <td>Pattern Recognition<br>Image Processing and Networking</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117771>Hosimin Thilagar S</a></td>
+        <td>Electrical Machines and Drives<br>Electric Vehicle Technology<br>MEMS Technology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117679>Ilakkiya S</a></td>
+        <td>Aerospace Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118005>Ilamparuthi K</a></td>
+        <td>Soil Mechanics and Foundation Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117996>Imayathamizhan N M</a></td>
+        <td>Fibre Science<br>Technical Textiles<br>Textile Testing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117833>Indira Gandhi S</a></td>
+        <td>Optical Networks</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117937>Indira R</a></td>
+        <td>Linear Algebra <br>Generalized Inverses</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117877>Indra Ganthi K</a></td>
+        <td>Wireless Sensor Networks<br>Mobile Computing<br>Object Oriented Methodologies</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117860>Indumathi J</a></td>
+        <td>Software Engineering<br>Software Testing<br>Software Project Management<br>Information Security<br>Artificial Intelligence<br>Knowledge Management<br>Advanced DBMS<br>Data Mining<br>Data Warehousing<br>Mobile Computing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117825>Indumathi P</a></td>
+        <td>Communication Networks</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57484>Iniyan S</a></td>
+        <td>Gas Dynamics<br>Jet Propulsion<br>Engineering Management<br>Design of condensers<br>Evaporators and cooling towers<br>Energy Conservation<br>Modeling and Project Management<br>Renewable Energy Systems</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/163835>Janakiraman Kumar</a></td>
+        <td>Crystal Growth and Characterisation of Technologically Important Semiconductors and Topological Materials</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117973>Janicirani J</a></td>
+        <td>Vehicle Dynamics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117809>Jawahar Senthilkumar V</a></td>
+        <td>VLSI<br>Applied Electronics and Computer Networks</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57354>Jaya K P</a></td>
+        <td>Concrete Structures<br>Earthquake Engineering<br>Soil Structure Interaction</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117770>Jayachitra V P</a></td>
+        <td>Wireless Sensor Network</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117991>Jayakuamari L S</a></td>
+        <td>Polymer Composites<br>Graphene Synthesis<br>High Temperature Resins</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118028>Jayalakshmi S</a></td>
+        <td>Remote Sensing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117712>Jayamuthunagai J</a></td>
+        <td>Biotechnology and Applied Microbiology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117904>Jayanth Jacob</a></td>
+        <td>Technology Adoption</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117684>Jayapriya J</a></td>
+        <td>Microbial Fuel Cells<br>Bio Electrocatalysis<br>Air Dispersion Modelling<br>Bio Waste Reutilization<br>Microbial Corrosion</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117697>Jayaraj S</a></td>
+        <td>Alternative Fuel</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117763>Jayashree Padmanabhan</a></td>
+        <td>Network Security<br>Object Technologies<br>Bio informatics<br>Quantum computing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117814>Jayasree T</a></td>
+        <td>Biomedical Engineering<br>Electronic Nose<br>Biomechanics<br>Rehabilitation Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117948>Jestin Lenus A</a></td>
+        <td>Materials Science and Solid State Luminescence</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117815>Jeyalakshmi V</a></td>
+        <td>Internet of Things<br>Artificial Intelligence<br>VLSI Testing<br>Power Optimization<br>Wireless Sensor Networks<br>MEMS</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117693>Jeyaradha J</a></td>
+        <td>Architecture</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118034>John Prakash A</a></td>
+        <td>Computer Networks<br>Cryptography and Network Security<br>Cloud Computing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117921>Jones Tarcius Doss L</a></td>
+        <td>Numerical Analysis<br>PDE<br>Algorithms</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117826>Joy Vasantha Rani S P</a></td>
+        <td>VLSI</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117717>Kalaichelvan K</a></td>
+        <td>Ceramic-Metal Joining<br>Composite Materials</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117637>Kalaimagal S</a></td>
+        <td>Microcontroller<br>Mechatronics<br>Industrial Robotics<br>Mechatronics<br>Control Systems</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/18033>Kaliraj P</a></td>
+        <td>Immunology and Recombinant DNA Technology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117893>Kalpana D</a></td>
+        <td>Modeling and Control</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117952>Kalpana G</a></td>
+        <td>Condensed Matter Physics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117804>Kamala J</a></td>
+        <td>VLSI<br>Control Systems<br>Solar Energy</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117856>Kamala V</a></td>
+        <td>Operations Research and Operations Management</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117894>Kamalanand K</a></td>
+        <td>Biomedical Engineering<br>Mathematical Modelling</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117969>Kanchana M</a></td>
+        <td>Printed Electronics<br>Smart Packaging</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117641>Kanmani S</a></td>
+        <td>Reclamation and Reuse of Industrial Wastewaters by Chemical and Biological<br>Converting Waste into Energy<br>Generation of Hydrogen<br>Environmental management Plan for Industries<br>Remediation of Soil for Heavy Metals and Organic Pollutants<br>Utilisation and Solidification of Industrial Sludges<br>Environmental Applications of AOPs for Industrial Water Pollution Control<br>Degradation of Toxic and Non Bio Degradable Organic Pollutants in Gaseous<br>Utilization of Renewable Solar Energy and Design of Solar P</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118023>Kanmani Shanmuga Priya R</a></td>
+        <td>Remote Sensing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/60526>Kannan Arputharaj</a></td>
+        <td>Network Security<br>Data Mining<br>Artificial Intelligence and Software Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117843>Kannan M</a></td>
+        <td>VLSI and Networking</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117916>Kanthababu M</a></td>
+        <td>Machining<br>Condition Monitoring<br>Smart Manufacturing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117757>Karthika Devi M S</a></td>
+        <td>Data Structures<br>Database Systems<br>Data Mining</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117662>Karthikeyan M S</a></td>
+        <td>Fluid Transients<br>Climate Change and Water Resources</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117980>Karthikeyan P</a></td>
+        <td>Mechatronics<br>Robotics<br>Brain Computer Interface<br>Machine Learning and Fusion</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117645>Karthikeyan S</a></td>
+        <td>Water and Wastewater Treatment<br>Air Pollution Control</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57469>Karunamoorthy L</a></td>
+        <td>Metal Cutting<br>Mechatronics<br>Automation<br>Composite Material<br>Material Characterisation</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117765>Kathiroli R</a></td>
+        <td>Security in Mobile Adhoc Networks</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117685>Kavitha A</a></td>
+        <td>Design of Buildings</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117796>Kavitha A</a></td>
+        <td>Non Linear Dynamics in Power Converters<br>Special Electrical Machines</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117844>Kavitha G</a></td>
+        <td>Bio Medical Image Processing</td>
+        </tr>
+        <td><a href=http://bio.au-kbc.org/faculty/kavita/people.html>Kavitha S</a></td>
+        <td>Biopacemaking<br>Electrophysiology<br>ION Channel Biology<br>Patch Clamp<br>Plant Drought Tolerance<br>Stem Cell Technology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117674>Kaviyarasu A</a></td>
+        <td>Avionics<br>Flight Control and Navigation</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117647>Keerthana Rani</a></td>
+        <td>Environmental Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118036>Khanna Nehemiah H</a></td>
+        <td>Software Engineering<br>Database Systems<br>Data Mining<br>Image Processing<br>Artificial Intelligence</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117884>Kola Sujatha P</a></td>
+        <td>Intrusion Detection System<br>Data Mining and Soft Computing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117987>Kothandaraman B</a></td>
+        <td>Rubber Modified Thermosets<br>Nanocomposites<br>Sol Gel Process<br>Composites</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/22643>Krishnakumar B</a></td>
+        <td>Applied Probability and Stochastic Processes<br>Queueing Network Models<br>Mathematical Ecology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117909>Krishnakumar S</a></td>
+        <td>Labour Legilsations<br>Industrial Relations<br>Labour Management<br>Entrepreneurship Development<br>Behavioural Sciences</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/22899>Krishnamurthy Murali</a></td>
+        <td>Nonlinear Dynamics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117666>Krishnaveni M</a></td>
+        <td>Hydrological Modelling<br>GIS and RS Applications to Irrigation and Water Resources Management<br>Climate Change</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117867>Kulithungan K</a></td>
+        <td>Computer Networks<br>Wireless Adhoc and Sensor Networks<br>Internet of Things<br>Embedded Systems<br>Network Security<br>Web Design and Management<br>Andriod Applications<br>Database Concepts</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117966>Kumar B</a></td>
+        <td>Printing Machines<br>Colour Science<br>Packaging Technology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117900>Kumar S</a></td>
+        <td>Soft Sensing<br>State and Parameter Estimation</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117649>Kumaravel V</a></td>
+        <td>Bio Signal Processing<br>Medical Image Processing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118019>Kumaresan Govindaraj</a></td>
+        <td>Solar Energy<br>Heat Transfer<br>CFD<br>Energy Storage</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117985>Kumaresan V</a></td>
+        <td>Fans and Blowers<br>Design of Heat Exchangers<br>Thermal Engineering<br>Heat Transfer<br>Power Plant Engineering<br>Nanofluids</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118017>Kumaresan V</a></td>
+        <td>Energy Storage<br>Refrigeration and Air Conditioning Technology<br>Fans and Blowers<br>Design of Heat Exchangers<br>Heat Transfer and Nano Fluids</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117789>Kumudini Devi R P</a></td>
+        <td>Power Systems</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/28214>Kurian Joseph</a></td>
+        <td>Solid and Hazardous Waste Management<br>Environmental Management Systems<br>Pollution Prevention<br>Zero Discharge Systems<br>Sustainable Development<br>Membrane Technologies<br>Environmental Economics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117714>Lakshmi B S</a></td>
+        <td>Chemical Biology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117854>Lakshmi Narasimhan C</a></td>
+        <td>Rock Magnetism and Paleomagnetism<br>Disaster Management</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117775>Lakshmi P</a></td>
+        <td>Soft Computing Techniques<br>Process Control<br>Power Syetem Stability</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118013>Lakshmi S</a></td>
+        <td>Sustainable Urban development and Built Environment</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117794>Latha K</a></td>
+        <td>Fuel Cells<br>Power Electronics<br>Drives<br>Electrical Machines</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117811>Laxmikandan T</a></td>
+        <td>Communication Systems</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117680>Leevavathy Mercy</a></td>
+        <td>Aircraft Structure<br>Finite Element Methods</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117661>Lenin Kalyana Sundaram V</a></td>
+        <td>Ground Water Modelling<br>GIS Applications to Water Resources<br>Rain Water Harvesting</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117726>Lima Rose Miranda</a></td>
+        <td>Preparation of Activated Carbon from Indigenous Sources and their Characterization<br>Adsorption using Activated Carbon of Industrial Effluents<br>Hydrodynamics and Mass Transfer Studies involving Three Phases in Circulating Fluidized Beds<br>Design and Development of Software Packages on Chemical Reaction Engineering<br>Photochemical<br>Photo Catalytic Reactor for the Treatment of Hazardous Materials in Liquid Effluents<br>Fluidization Characteristics in Inclined Fluidized Bed</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117922>Loganathan P</a></td>
+        <td>Computational Fluid Dynamics and Heat and Mass Transfer</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118040>Lokesh Sivanandam</a></td>
+        <td>C Programming<br>JAVA</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117883>Lydia Elizabeth B</a></td>
+        <td>Cloud Security<br>Information Security<br>Computer Networks and Mobile Communication</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117656>Madhavi Ganesan</a></td>
+        <td>Ground Water Modelling<br>Aquifer Mapping and Recharge<br>Improving Crop Productivity and Profitability</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117992>Madhusoothanan M</a></td>
+        <td>Fabric Engineering<br>Technical Textiles</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117903>Magesh R</a></td>
+        <td>Marketing<br>Behavioural Science<br>IPR and Patent Science</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117737>Mahalakshmi G S</a></td>
+        <td>Logic<br>Knowledge Representation<br>Mining<br>NLP<br>Cognitive Poetics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57433>Mahalakshmi N V</a></td>
+        <td>Advanced Thermodynamics<br>Computational Fluid Dynamics<br>Instrumentation for Thermal Systems<br>Jet and Rocket Propulsion<br>Internal Combustion Engine Design<br>Engine Auxiliary Systems for Post Graduate Students in Internal Combustion Engineering<br>Applied Thermodynamics<br>Thermal Engineering<br>Engineering Graphics<br>Gas Dynamics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117951>Mahalingam Arumugam</a></td>
+        <td>Nonlinear Dynamics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117846>Mala John</a></td>
+        <td>Communication and Signal Processing<br>Image Processing and Pattern Recognition</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117859>Mala T</a></td>
+        <td>Natural Language Processing<br>Computer Graphics<br>Multimedia<br>Cloud Computing<br>Distributed Systems</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117810>Malathi K</a></td>
+        <td>Microwave Engineering<br>Antenna Design<br>Planar Transmission Lines<br>EMI/EMC<br>Signal Integrity in High Speed Design</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117890>Manamalli D</a></td>
+        <td>Process Control</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117839>Manikandan M</a></td>
+        <td>Image Processing<br>Biomedical Systems<br>Vlsi Computing<br>Cloud Security</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117818>Manimekalai T</a></td>
+        <td>Wireless Communication <br>Signal processing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117718>Manisha Vidyavathy S</a></td>
+        <td>Advanced Structural ceramics<br>Electronic Ceramics<br>Traditional Ceramics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117755>Manjula D</a></td>
+        <td>NLP<br>Text Mining<br>Parallel Processing<br>Grid Computing<br>Databases</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/166547>Manjula D</a></td>
+        <td>Bioinformatics<br>Health Care</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117716>Manohar P</a></td>
+        <td>Material Science and Composites<br>Electronic Ceramics<br>Nuclear Physics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117834>Mariammal K</a></td>
+        <td>VLSI<br>Signal Processing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117743>Mary Anita Rajam V</a></td>
+        <td>Image Processing<br>Computer Networks<br>Security<br>Machine Learning</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117965>Masilamani S R</a></td>
+        <td>Urban Development and Management<br>City Planning<br>Neighborhood Planning<br>Participatory Planning and Community Development<br>Village Planning and Regional Development<br>Quality of Life and Image of Cities<br>Survey Techniques and Data Analysis<br>Demographics<br>Project Formulation</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/18140>Meenakshi M</a></td>
+        <td>Digital<br>Wireless and Optical Communication - Physical and MAC Layer<br>UWB in WBAN Systems<br>Light-Weight Cryptography<br>Material Distributive Topology Based Antenna Design<br>Machine Learning for Wireless Communications</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57330>Meenakshisundaram S</a></td>
+        <td>Bioprocess Engineering<br>Biotechnology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117694>Meenakumari P</a></td>
+        <td>Architecture<br>Medical Architecture</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117837>Meganathan D</a></td>
+        <td>VLSI</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117646>Merline Sheela A</a></td>
+        <td>Environmental Microbiology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117899>Meyyappan S</a></td>
+        <td>Fault Tolerant Digital Systems Design</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57431>Mohan B</a></td>
+        <td>Machine Drawing<br>Engineering Statistics and Quality Control<br>Machine Design<br>Fluid Power Control<br>Welding Technology<br>Mechanical Metallurgy<br>Elements of Production Techniques<br>Finite Element Analysis in Manufacturing<br>Hydraulics and Pneumatics<br>Fluid Power Automation<br>Hydraulics and Pneumatics System Design<br>Advanced Materials Technology<br>Finite Element Analysis in Manufacturin</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57446>Mohan Lal D</a></td>
+        <td>Thermodynamics<br>Heat and Mass Transfer<br>Cryogenic Engineering<br>Refrigeration Systems<br>Air Conditioning Systems<br>Industrial Refrigeration</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/36608>Moorthy T V</a></td>
+        <td>Composite Materials<br>Mettalurgy and Material Science<br>Computer Aided Inspection and Total Quality Management<br>CAD and CAM<br>Robotics<br>Material Science and Engineering<br>Creativity and Innovation</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117653>Mudgal B V</a></td>
+        <td>Free Surface Flow<br>Experimental Hydraulics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117977>Mugendiran V</a></td>
+        <td>Metal Formin</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117936>Muniasamy G</a></td>
+        <td>Combinatorial Representation Theory</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117998>Muralidhar B A</a></td>
+        <td>Natural Fiber Reinforced Composites and Garment Construction</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118032>Murugan K</a></td>
+        <td>Wireless Networks</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117631>Muruganandhan R</a></td>
+        <td>Product Design<br>Finite Element Analysis<br>Composite Materials and Surface Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117949>Murugaraj Rathinasamy</a></td>
+        <td>Dielectric Materials<br>Multiferroic Materials<br>Ionic Materials</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118021>Murugasan R</a></td>
+        <td>Remote Sensing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118002>Murugesan M</a></td>
+        <td>Yarn Engineering<br>Fabric Formation<br>Garment Technology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/22642>Murugesan Venkatesan</a></td>
+        <td>Solid Mechanics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117963>Murugeswari Andichamy</a></td>
+        <td>Strongly Correlated Systems<br>Nanomaterials<br>Magnetism</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117787>Muthukumar S</a></td>
+        <td>Renewable Energy<br>Switching Mode Power Supply<br>Power Electronic Drives</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117688>Muthulakshmi B</a></td>
+        <td>Architecture and Housing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117764>Muthurajkumar Sannasy</a></td>
+        <td>Cloud Computing<br>Data Mining</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57540>Muttan S</a></td>
+        <td>ICT Applications in Medicine<br>BCI Applications</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118004>Muttharam M</a></td>
+        <td>Soil Mechanics and Foundation Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117897>Mythily M</a></td>
+        <td>Modeling and Control of Industrial Process<br>Industrial Instrumentation</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/60851>Nagarajan Govindan</a></td>
+        <td>Internal Combustion Engines<br>Electronic Engine Management Systems<br>Pollution Control and Alternate Fuels</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117730>Nagendra Gandhi N</a></td>
+        <td>Mass transfer<br>Petroleum Refinery Engineering<br>Environmental Toxicology<br>Nano Materials and Characterization<br>Green Chemistry</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117906>Nakkeeran Senthil Kumar</a></td>
+        <td>Service Quality<br>TQM<br>Branding<br>Advertising<br>Supply Chain Management</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117642>Namasivayam Vasudevan</a></td>
+        <td>Environmental Applications of Microorganisms and Bio Products in Waste Treatment<br>Treatment of High TDS Industrial Wastewater<br>Decentralized Wastewater Treatment<br>Hygienization of Drinking Water Quality</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117767>Nancy Jane Y</a></td>
+        <td>Machine Learning<br>Soft Computing<br>Data Mining and Data Warehousing<br>Clinical Data Analytics<br>Health-care Intelligence and Real-time Decision Making Systems</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117983>Nanda Kumar C</a></td>
+        <td>Machinin<br>Composite Materials</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57338>Nandhini Devi G</a></td>
+        <td>Biochemical Engineering<br>Environmental Biotech</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117720>Narashiman K</a></td>
+        <td>Total Quality Management</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/24179>Natarajan E</a></td>
+        <td>Thermal Engineering<br>Power Plant Engineering<br>Gas Dynamics<br>Aerodynamics<br>Jet Propulsion<br>Gas Turbines<br>Fluid Bed Systems<br>Boiler Technology<br>Combustion Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117896>Natarajan V</a></td>
+        <td>Cryptography</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117986>Natchimuthu N</a></td>
+        <td>Polymer Blends<br>Interpenetrating Polymer Networks<br>Rubber Recycling<br>Rubber Compounding and Product Development<br>Reinforcement of Elastomers<br>Polymer Synthesis<br>Rubber Metal Bonding</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118029>Navamuniyammal M</a></td>
+        <td>Remote Sensing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117995>Neelakandan R</a></td>
+        <td>Fabric Formation<br>Technical Textiles</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117761>Neelavathy Pari S</a></td>
+        <td>Security in Wireless Network</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/124234>Nehru Kasi</a></td>
+        <td>Bioinorganic and Catalysis Nanomaterials</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57541>Nirmala Devi S</a></td>
+        <td>Medical Electronics<br>Medical Image Processing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117968>Nirmala J P</a></td>
+        <td>Printing Methods and Allied Industry<br>Packaging<br>Inks and Coatings</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117807>Nirmalkumar P</a></td>
+        <td>Reconfigurable Computing<br>VLSI for Wireless Communication<br>Evolvable Hardware</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117914>Omkumar M</a></td>
+        <td>Scheduling<br>Optimization<br>Metaheuristics<br>Simulation<br>Metrology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117769>Pabitha P</a></td>
+        <td>Internet Computing<br>Semantic Web<br>Machine Intelligence<br>Software Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117857>Padmanabhan Panchu K</a></td>
+        <td>Operations Scheduling<br>and Robotics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117910>Padmavathi T</a></td>
+        <td>Marketing and Human Resource Management</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117939>Palanisamy P K</a></td>
+        <td>Nonlinear Optics and Nanophotonics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117639>Palanivelu K</a></td>
+        <td>Pollution Control<br>Carbon Capture</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117734>Pandiarajan V</a></td>
+        <td>Thermal Storage System<br>Waste Heat Recovery<br>Energy Applications</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117673>Parammasivam K M</a></td>
+        <td>Low Speed Aerodynamics<br>Combustion<br>Wind Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/140828>Parammasivam K M</a></td>
+        <td>Wind Turbine and Automotive  Aerodynamics <br>Film cooling<br>combustion flame stabilization</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57376>Paul Robert T</a></td>
+        <td>Maintenance and Reliability Engineering<br>Engineering Quality Control<br>Operations Scheduling</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117925>Paulraj S</a></td>
+        <td>Operations Research</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57358>Pazhani K C</a></td>
+        <td>Corrosion Engineering<br>Concrete Technology<br>Development of Alternate Materials</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117727>Perarasu Thangavelu</a></td>
+        <td>Heat Transfer Enhancement<br>CFD Analysis<br>Bioactive Components</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117831>Piramasubramanian S</a></td>
+        <td>Optical Communication<br>RF Engineering<br>Antenna</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57369>Ponmalar V</a></td>
+        <td>Construction Materials<br>Construciton Managment<br>Repair and Rehabilitation of Structures</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117961>Ponnusamy V</a></td>
+        <td>Luminescence in Solids and Phosphor Materials</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117762>Ponsy R K Sathia Bhama</a></td>
+        <td>Scheduling in Grid Computing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117650>Poonguzhali S</a></td>
+        <td>Biomedical Instrumentation<br>Medical Image Processing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117923>Prabhakaran D J</a></td>
+        <td>Complex Analysis<br>Special Functions</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57480>Pradeep Kumar M</a></td>
+        <td>Mechanical Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/43400>Prakash J</a></td>
+        <td>Control and Instrumerntation Engineering<br>Technologies<br>Bio Technology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117838>Prakash P</a></td>
+        <td>Signal Processing<br>Optical Signal Processing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117636>Prasanna V</a></td>
+        <td>Non Traditional Machining Processes<br>Hydraulics and Pneumatics<br>Mechatronics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117729>Pratheeba C N</a></td>
+        <td>Process Modeling and Simulation Chemical and Catalytic Reaction Engineering Combustion</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117964>Pratheep Moses K</a></td>
+        <td>Planning Theory<br>Transportation Planning<br>Land Suitability Analysis and Land Use Modeling<br>Zonal and Local Area Planning<br>Planning Norms and Standards<br>Network Planning<br>Urban Renewal<br>GIS Applications in Planning<br>Environmental Planning and Policies</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117822>Praveen K</a></td>
+        <td>Digital Signal and Image Processing<br>Embedded Systems</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118007>Premalatha K</a></td>
+        <td>Soil Mechanics and Foundation Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/137277>Premchander P</a></td>
+        <td>Semiconductors</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117781>Pugazhendhi Sugumaran C</a></td>
+        <td>High Voltage Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117824>Pushpalatha V</a></td>
+        <td>Communication Systems and Networking</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117722>Radha K V</a></td>
+        <td>Bioprocess Engineering<br>Chemical Process Calculations<br>Environmental Biotechnology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117682>Radha Perumal Ramasamy</a></td>
+        <td>Soft Matter<br>Polymers<br>Nano Science<br>Crystal Growth</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117709>Radha Ramachandran</a></td>
+        <td>Biotechnology and Applied Microbiology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117882>Radha Senthil Kumar</a></td>
+        <td>XML Technology<br>Database Management Systems<br>Web Information Retrieval<br>Data Mining<br>Fuzzy Logic</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117791>Radhakrishnan N</a></td>
+        <td>Embedded Linux<br>Microcontrollers and SoC Boards<br>Multimodal Biometrics<br>Image Processing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117938>Ragavananthan S</a></td>
+        <td>Engineering Mechanics<br>Soild Mechanics<br>Fluid Mechanics<br>Engineering Graphics<br>Kinematics and Dynamics<br>Design of Machine Elements<br>Design of Transmission Systems</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117740>Raghuveera T</a></td>
+        <td>HCI<br>Video and Image Processing<br>Multimedia and Computer Graphics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118009>Rahima Shabeen S</a></td>
+        <td>FRP Composites<br>Thin Walled Structures</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/36607>Rajadurai A</a></td>
+        <td>Structure Property Correlation<br>Advanced Cutting Tool Materials<br>Finite element Analysis of Metal Forming</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117696>Rajasekaran S K</a></td>
+        <td>Visual Communication</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57477>Rajendra Boopathy S</a></td>
+        <td>Manufacturing Technology<br>Composite Materials<br>Design of Experiments<br>Supply Chain Management</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/97757>Rajesh G</a></td>
+        <td>Internet of Things<br>Machine Learning<br>Computational Intelligence<br>Software Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57487>Rajeswari N</a></td>
+        <td>Food Packaging<br>Polymer Nanocomposites<br>Printing and Packaging</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117689>Rajeswari R</a></td>
+        <td>Architecture</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117660>Rajkumar R</a></td>
+        <td>Irrigation Water Management<br>Agricultural Economics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57428>Rajmohan M</a></td>
+        <td>Logistics and Supply Chain Management<br>Operations Management<br>Metaheuristics<br>Data Analytics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57373>Raju Ramasamy</a></td>
+        <td>Quality Engineering and Management</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117713>Ramachandran Palpandi Raja</a></td>
+        <td>Biotechnology and Applied Microbiology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117802>Ramadass N</a></td>
+        <td>Embedded System<br>VLSI Design and Reconfigurable Systems</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117955>Ramajothi J</a></td>
+        <td>Materials Science and Thin Films</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117823>Ramakrishna P V</a></td>
+        <td>VLSI<br>Digital Communication and RF System Design</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/36602>Ramakrishnan S S</a></td>
+        <td>Microwave and Remote Sensing<br>GIS applications in Highway Planning and Analysis GIS Accuracy Assessment and Error Analysis</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57336>Ramalingam S</a></td>
+        <td>Bioprocess Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117800>Ramana Rao Y V</a></td>
+        <td>Digital Signal and Image Processing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57379>Ramesh Babu T</a></td>
+        <td>Manufacturing Management<br>Robotics Decision Support and Expert Systems</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57359>Ramesh Babu Thangavelu</a></td>
+        <td>Work System Design<br>Ergonomics<br>Decision Support System<br>Manufacturing Automation<br>Professional Ethics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117665>Ramesh K</a></td>
+        <td>Irrigation Water Management<br>Hydro Chemistry</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/23769>Ramesh R</a></td>
+        <td>Global Climate Change and Biogeochemical Cycles in Coastal and Riverine Ecosystems<br>Coastal and Ground Water Hydrology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117784>Ramesh R</a></td>
+        <td>Power Systems</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117659>Ramji Vaidhyanathan</a></td>
+        <td>Soil and Water Conservation Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117686>Ranee Maria Leonie Vedamuthu</a></td>
+        <td>Architectural History and Conservation<br>Design Theory<br>Vernacular Studies</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117875>Ranjani Parthasarathi</a></td>
+        <td>Computer Architecture<br>Multicore Computing<br>Reconfigurable Computing<br>Adhoc Networks<br>Indian Knowledge System and Language Technology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118016>Rashia Begum S</a></td>
+        <td>Kinematics of Machines<br>Dynamics of Machines<br>Design of Machine Elements<br>Design of Transmission Systems<br>Finite Element Analysis<br>Engineering Mechanics<br>Engineering Graphics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117926>Rathinasamy A</a></td>
+        <td>Numarical Analysis for Stochastic Differential Equations</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117779>Rathnakannan K</a></td>
+        <td>Nano Electronics<br>VLSI<br>MEMS<br>Reconfigurable Computing<br>Embedded Systems</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117989>Ravi Chandran K</a></td>
+        <td>Polymer Blends and Composites<br>Polymer Processing<br>Conductive Elastomers<br>Organic Inorganic Hybrid Nano Composites</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117663>Ravikumar G</a></td>
+        <td>Water Resources Engineering<br>Rain Water Harvesting</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57332>Renganathan Sagadevan</a></td>
+        <td>Bio Fuels Production<br>Green Synthesis of Nano Materials and Their Biomedical Applications<br>Environmental Biotechnology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117750>Renugadevi S</a></td>
+        <td>Database Systems<br>Data Structures</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117999>Renuka Devi M</a></td>
+        <td>Technical Textiles<br>Fabric Formation<br>Quality Assessment of Textiles<br>Garment Manufacturing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118010>Renuka S M</a></td>
+        <td>Sustainable Construction<br>Project Management<br>Construction Technology.</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118033>Rhymend Uthariaraj V</a></td>
+        <td>Network Security</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117835>Rimmya C</a></td>
+        <td>RF and Optical Engineeering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117692>Rukkumany Ramakrishnan Harishankar</a></td>
+        <td>Assessment of Water Management Systems</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117918>Sadiq Basha S</a></td>
+        <td>Fixed Point Theory</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117817>Sakthivel P</a></td>
+        <td>VLSI Systems and Electronic Design Automation</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57475>Sampathkumar S</a></td>
+        <td>Condition Monitoring<br>Low Cost Automation<br>Acoustic Emission Technique Application<br>CIM<br>NDT</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117632>Samuel Raj D</a></td>
+        <td>Precision Machining<br>Sustainable Machining<br>Manufacturing Metrology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117970>Sandeep J</a></td>
+        <td>Printing and Packaging</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117888>Sangeetha D</a></td>
+        <td>Cloud Computing<br>Cryptography and Security<br>Web Services<br>Database Management System</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117634>Sangeetha Dharmalingam</a></td>
+        <td>Polymers<br>Membranes<br>Fuel Cells<br>Desalination<br>Waste Water Treatment<br>Biopolymers<br>Composites<br>Smart Polymers<br>Bioelectricity<br>Polymer Nanocomposites</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57552>Sanjeevi S</a></td>
+        <td>Satellite Image Processing and GIS Hyperspectral Remote Sensing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117798>Sanjib Kumar Patanaik</a></td>
+        <td>Robust control Applications</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117927>Sankar K</a></td>
+        <td>Graph Theory</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117911>Sankar Meenakumari</a></td>
+        <td>Retail Management</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117691>Santhakumar S</a></td>
+        <td>Architecture and Planning</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117731>Santhoshini Priya T</a></td>
+        <td>Photocatalyst<br>Gas Hydrates<br>Petroleum Refining<br>Enhanced Oil Recovery<br>Plant Safety and HAZOP</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/18165>Sarada Y</a></td>
+        <td>Applied Probability and Stochastic Modelling</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/36617>Saravanabava T P</a></td>
+        <td>Computer Network<br>Object Oriented Programming</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117677>Saravanakumar A</a></td>
+        <td>Avionics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57444>Saravanan Rajagopal</a></td>
+        <td>Refrigeration<br>Cold Storage<br>Energy Conservation</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117664>Saravanan Ramasamy</a></td>
+        <td>Groundwater Assessment and Management - Multi Aquifer Modeling<br>Artificial Recharge Studies<br>Contaminant Transport Modeling<br>Regional Modeling<br>Water Resources Management - Flood Modeling for Sustainable development<br>Rainwater Harvesting<br>Environmental Engineering - GIS for Solid Waste Management<br>Water Supply Distribution Planning and Management<br>Evolutionary Algorithms and their Applications to Water Resources Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117690>Saravanan S</a></td>
+        <td>Digital Architecture</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117719>Saravanathamizhan R</a></td>
+        <td>Advanced Oxidation Process<br>Mathematical Modeling</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57542>Sasikala M</a></td>
+        <td>Bio Signal Processing<br>Medical Image Processing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117871>Saswati Mukherjee</a></td>
+        <td>Cloud Computing<br>Distributed System<br>Operating System Design<br>Data Structures</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117832>Sathiesh Kumar V</a></td>
+        <td>Opto-Mechatronic System Design</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117806>Seetharaman R</a></td>
+        <td>Electromagnetic Compatibility</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117962>Selladurai S</a></td>
+        <td>Solid State Ionics and Materials Science</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117993>Selvakumar N</a></td>
+        <td>Chemical Processing<br>Functional Finishes</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117742>Selvamani K</a></td>
+        <td>Information Security<br>Human Computer Interface<br>Computer Networks<br>Cloud Computing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117878>Selvi Ravidran</a></td>
+        <td>Sensor Networks<br>Mobile Computing<br>Distributed and Cloud Computing<br>Computer Architecture<br>Internet Of Things</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117864>Sendhilkumar S</a></td>
+        <td>Web Mining<br>Data Mining<br>Semantic Web<br>Data Warehousing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117669>Senthil Kumar C</a></td>
+        <td>Aerodynamics and Computational Fluid Dynamics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117707>Senthil Kumar M</a></td>
+        <td>Automation and Control Systems</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57479>Senthil Kumar V S</a></td>
+        <td>Superplastic Forming<br>Friction Stir Processing/Welding<br>Composites<br>Manufacturing Engineering<br>Supply Chain Management.</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/36613>Senthil Kumaran S</a></td>
+        <td>Physical Metallurgy<br>Welding Technology<br>Metal Forming<br>Mechatronics<br>Metrology and Computer Aided Inspection<br>Metal Casting</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57353>Senthil R</a></td>
+        <td>Steel and Space Structures<br>Composite Structures<br>Fibre Optics Sensors Applications</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117967>Senthil Vadivu K</a></td>
+        <td>Printing Technology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117671>Senthilkumar K</a></td>
+        <td>Avionics<br>Unmanned Aerial Vehicle Systems<br>Aircraft<br>Guidance and Control</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117706>Senthilkumar P</a></td>
+        <td>Internal Combustion Engines<br>Automotive Materials<br>Pollution Control and Alternate Fuels</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117772>Senthilkumar V</a></td>
+        <td>Power Systems</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/36622>Sethumadhavan R</a></td>
+        <td>Energy Conservation<br>Energy Auditing<br>Renewable Energy and its Applications<br>Waste Management<br>Power Plant consultancy<br>Demand Side Management</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/22881>Sethuraman G</a></td>
+        <td>Graph Theory</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117946>Shankar K V</a></td>
+        <td>Rock Mechanics and Ground Control<br>Numerical Modelling<br>and Computer Application in Mining</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117752>Shanmuga Priya M</a></td>
+        <td>Data Mining<br>Data Structures</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57434>Shanmuga Sundaram K</a></td>
+        <td>Design of Hydraulic and Pneumatic Systems<br>Theory of Machines<br>Machine Design<br>Design of Machine Elements<br>Design of Transmission Systems<br>Finite Element Analysis<br>Computer Aided Design<br>Product Design and Development<br>Additive Manufacturing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118027>Shanmugam M</a></td>
+        <td>Remote Sensing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117805>Shanmugapriya M</a></td>
+        <td>Electromagnetics<br>Antennas<br>Optical Communication<br>MEMS</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117749>Shanthi A P</a></td>
+        <td>Neural Networks<br>Micro Processors<br>Computer Architecture</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117777>Sharmeela C</a></td>
+        <td>Power Systems<br>Power Quality</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117710>Sharmila Anishetty</a></td>
+        <td>Biotechnology and Applied Microbiology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117902>Sheik Manzoor A K</a></td>
+        <td>Management Information System</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57539>Shenbaga Devi S</a></td>
+        <td>Bio Signal Processing<br>Medical Image Processing<br>Brain Computer Interface Applications</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118014>Shibu G</a></td>
+        <td>Machine Design<br>Applied Mechanics<br>Mechanism</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117751>Shiloah Elizabeth D</a></td>
+        <td>Digital Image Processing<br>Digital Signal Processing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117849>Shoba K N</a></td>
+        <td>English Language Testing<br>Literature<br>Eco Criticism</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117850>Shrimathy Venkatalakshmi T</a></td>
+        <td>English Language Testing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117975>Siddharthan Arjunan</a></td>
+        <td>Microwave Processing of Materials<br>Biomaterials<br>Surface Engineering<br>Nanomaterials<br>Injection Moulding<br>Glass Fibre Manufacturing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117695>Sitalakshmi K R</a></td>
+        <td>Architecture History and Theory</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117813>Sittalatchoumy R</a></td>
+        <td>Wireless Sensor Networks<br>Communication Networks<br>Microcontroller<br>Linear Integrated Circuits</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/22900>Sivakumar Kandasamy</a></td>
+        <td>Photonics Materials<br>Crystal Growth<br>X-Ray Crystallography<br>Materials Science</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117723>Sivakumar Venkatachalam</a></td>
+        <td>Biodegradable Food Packaging Films<br>Extraction of Bioactive Compounds and Phytochemicals<br>Value Addition of Agro Products<br>Effluent Treatment<br>Alternative Fuels and Chemicals Such as Ethanol<br>Hydrogen from Biomass</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117917>Sivan Suthagar</a></td>
+        <td>Finite Element Method<br>Internal Combustion Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57339>Sivanesan Subramanian</a></td>
+        <td>Renewable Energy<br>Chemical Engineering<br>Chemistry<br>Environmental Science and Management<br>Atmospheric Science<br>Waste Water Treatment<br>Solid Waste Management<br>Biodegradation and Detoxification of Chemical Pollutants</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117783>Sivaprakasam A</a></td>
+        <td>Control of Electrical Machines<br>Power Electronics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117855>Sivaraj K</a></td>
+        <td>Environmental Geology and Marine Micropaleontology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117974>Sivaramakrishnan R</a></td>
+        <td>Composites<br>CIM and Robotics</td>
+        </tr>
+        <td><a href=http://au-kbc.org/nlp/sobha.html>Sobha L</a></td>
+        <td>Artificial Intelligence<br>Machine Learning<br>Natural Language Processing<br>Text Analysis</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117776>Somasundaram P</a></td>
+        <td>Power Systems<br>AI Applications to Power System Problems<br>Hybrid Microgrid<br>Renewable Energy<br>HVDC and FACTS</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117657>Soorya Vennila</a></td>
+        <td>Irrigation Sociology<br>Participatory Water Management</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117847>Soundiraraj S</a></td>
+        <td>English Language Teaching</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117648>Soundranayaki K</a></td>
+        <td>Environmental Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117836>Sridevi C</a></td>
+        <td>Image processing<br>Parallel Architectures</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117672>Sridhar B T N</a></td>
+        <td>High Speed Jets and Propulsion</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117873>Sridhar S</a></td>
+        <td>Image Processing<br>Medical Imaging<br>Data Mining<br>Algorithms</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/92805>Sridharan D</a></td>
+        <td>Electronics and Communication Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/22640>Sridharan V</a></td>
+        <td>Population Models<br>Reliability Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118022>Srinivasa Raju Kolanuvada</a></td>
+        <td>Remote Sensing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57553>Srinivasalu S</a></td>
+        <td>Petrology<br>Coastal and Marine Environmental Geochemistry<br>Tsunami Geology and Medical Geology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118020>Srinivasalu S</a></td>
+        <td>Ocean Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118024>Srinivasan K</a></td>
+        <td>Remote Sensing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117895>Srinivasan S</a></td>
+        <td>Image Processing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117976>Srirangarajalu N</a></td>
+        <td>Friction Stir Welding<br>Advanced Manufacturing Process<br>Material Characterization</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118003>Stalin V K</a></td>
+        <td>Soil Mechanics and Foundation Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117828>Subashri T</a></td>
+        <td>Network<br>Cryptography and Network Security</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117919>Subhashini S V</a></td>
+        <td>Computational Fluid Mechanics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117988>Subrahmanian V</a></td>
+        <td>Elastomer Science and Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117853>Subramani T</a></td>
+        <td>Engineering Geology<br>Mining Geology and Groundwater Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117994>Subramanian S</a></td>
+        <td>Yarn Spinning<br>Technical Textiles<br>Textile Management</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117790>Sudar Oli Selvi T</a></td>
+        <td>Power Electronics and Drives</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117635>Sudha J</a></td>
+        <td>Metallurgy and Materials Science<br>NDT<br>Condition Monitoring</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117738>Sudha S</a></td>
+        <td>Embedded Systems<br>Real Time Systems<br>VLSI Design</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/29943>Suganthi L</a></td>
+        <td>Theory Building<br>Quantitative Analysis<br>Data Analytics<br>Soft Computing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117812>Sujatha C M</a></td>
+        <td>Biomedical Signal and Image Processing<br>Respiratory Biomechanics<br>Machine Learning Techniques</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117851>Sujatha Priyadharsini P R</a></td>
+        <td>English Language Teaching</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57333>Sukumar M</a></td>
+        <td>Biosystems Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117880>Sumalatha M R</a></td>
+        <td>Distributed Systems<br>Cloud Computing<br>Big Data Analytics<br>Social Platforms<br>Data Security and Privacy</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117845>Sumithra G</a></td>
+        <td>Image Processing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117705>Sunil</a></td>
+        <td>Automotive Chassis<br>Vehicle Aerodynamics<br>Vehicle Body Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117655>Supriya P</a></td>
+        <td>Hydrological Modeling<br>Remote Sensing and GIS<br>Applications in Water Resources and Climate Change</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/71345>Suresh Babu A</a></td>
+        <td>Developing New Composite Materials and Testing<br>Topological Optimization<br>Thermal and Material Characterisation<br>Manufacturing Process Optimization</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117676>Suresh V</a></td>
+        <td>Aerodynamic</td>
+        </tr>
+        <td><a href=http://bio.au-kbc.org/faculty/suvro>Suvro Chatterjee</a></td>
+        <td>Angiogenesis<br>Cancer Biology<br>Cardiovascular Systems<br>Microgravity based Bioreactor<br>Nitric oxide Biology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118030>Swaminathan M R</a></td>
+        <td>CFD<br>Heat Transfer<br>IC Engines</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117868>Swamynathan S</a></td>
+        <td>Distributed Computing<br>Advanced Databases<br>Artificial Intelligence</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117708>Tamilselvan Jayavelu</a></td>
+        <td>Biotechnology and Applied Microbiology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117758>Thamarai Selvi S</a></td>
+        <td>Grid Computing<br>Cloud Computing and Neural Networks</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57372>Thamilselvi P</a></td>
+        <td>Concrete Technology<br>Modern Construction Materials</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117768>Thanasekhar B</a></td>
+        <td>Programming Models<br>GPU Computing<br>Compilers<br>Automata Theory</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117870>Thangaraj N</a></td>
+        <td>Computer Networks<br>Multimedia<br>Green Computing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117670>Thanigaiarasu S</a></td>
+        <td>Aerospace Propulsion<br>High Speed Jets<br>Aerodynamics and Computational Heat Transfer</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117971>Thendral Thiyagu T</a></td>
+        <td>Materials Science Multidisciplinary</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117715>Thenmuhil Deivarajan</a></td>
+        <td>Bioceramics<br>Porous Ceramics<br>Ceramic Fabrication</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117912>Thenral E</a></td>
+        <td>Operations<br>Marketing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117905>Thiruchelvi Arunachalam</a></td>
+        <td>Industrial Psychology<br>Social Psychology<br>Psychological Testing<br>Technology and Psychology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117982>Thirumal Azhagan M</a></td>
+        <td>Metal Casting<br>Composite Materials<br>Non Traditional Machining<br>Total Quality Management<br>Design of Experiments</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/36605>Thirumalaivasan D</a></td>
+        <td>Geographic Information System</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117633>Thirumavalavan K</a></td>
+        <td>Materials Structure and Properties<br>Thermodynamics and Kinetics of Materials<br>Manufacturing Management</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117956>Thiyagarajan P</a></td>
+        <td>Luminescent Materials and Thin Film Devices</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117889>Thyagarajan T</a></td>
+        <td>Intelligent Control</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118026>Udhayakumar C</a></td>
+        <td>Remote Sensing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118012>Uma Devi G</a></td>
+        <td>Traffic and Transportation Planning and Management<br>System Dynamics Simulation Modeling<br>Transport Economics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117869>Uma E</a></td>
+        <td>Service Oriented Architecture<br>XML and Web Services Security<br>Android Application Development<br>Software Testing<br>C# and Net Programming<br>User Interface Design</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117774>Uma G</a></td>
+        <td>Power Electronics<br>Power Quality<br>Non Linear Dynamics of PE Circuits<br>Microgrids</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117858>Uma G V</a></td>
+        <td>Software Engineering<br>Software Testing<br>Software Quality Assurance<br>Natural Language Processing<br>Information Security</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117816>Uma Maheswari O</a></td>
+        <td>Non Linear Signal Processing<br>Analysis of MRI<br>Enhancing the Underwater Images</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117747>Uma Maheswari P</a></td>
+        <td>Data Mining<br>Big Data Analytics<br>Deep Learning<br>Pattern Recognition<br>Tamil Inscription Processing<br>Information Retrieval<br>IoT Solutions<br>Software Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117792>Uma S</a></td>
+        <td>Embedded Systems</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117773>Umamaheswari Bhaskaran</a></td>
+        <td>Electrical Machines<br>Motor Control<br>Control Theory</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117886>Umamaheswari S</a></td>
+        <td>VLSI<br>Embedded Systems</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57355>Umarani C</a></td>
+        <td>Earthquake Structural Engineering<br>Finite Element Analysis<br>Construction Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117778>Usa S</a></td>
+        <td>High Voltage Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117654>Usha Natesan</a></td>
+        <td>Coastal and Ocean Engineering<br>Remote Sensing and GIS Applications in Marine Studies</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117736>Valli S</a></td>
+        <td>Parallel Processing<br>Computer Networks and Operating Systems</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117760>Valliyammai C</a></td>
+        <td>Cloud Computing<br>Big Data<br>Databases<br>Grid Computing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117786>Valsalal P</a></td>
+        <td>Electrical Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117785>Vanaja Ranjan P</a></td>
+        <td>Digital Signal Processing<br>Embedded Systems Technology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117874>Vani K</a></td>
+        <td>Signal Processing<br>Image Processing<br>Remote Sensing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117766>Varalakshmi P</a></td>
+        <td>Cloud Computing<br>Security<br>Networks<br>Wireless Sensor Networks<br>Mobile Computing<br>Compiler<br>Theory of Computation<br>Internet Of Things</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117704>Vasanthan B</a></td>
+        <td>Electric and Hybrid Vehicles<br>Automotive Transmission</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117891>Vasanthi D</a></td>
+        <td>Modeling and Control of Process</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117827>Vasuhi S</a></td>
+        <td>RF Microwave Engineering<br>Image Processing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118015>Vasumathi M</a></td>
+        <td>Engineering Graphics<br>Engineering Mechanics<br>Quality Concepts in Design</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117852>Veena Selvam</a></td>
+        <td>Linguistics and Literature</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57441>Vela Murali</a></td>
+        <td>Composite Materials and Mechanics<br>Solid Mechanics and Design of Components</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117745>Velammal B L</a></td>
+        <td>Image Processing<br>Multimedia Technologies<br>Data bases and Mining</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118025>Velappan E</a></td>
+        <td>Remote Sensing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117944>Velmurugan J</a></td>
+        <td>Medical Physics<br>Brachytherapy<br>Radiation Sources and Radiation Dosimetric Studies</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117954>Velraj G</a></td>
+        <td>Spectroscopy and Materials Science</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57481>Velraj R</a></td>
+        <td>Mechanical Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117748>Velvizhy P</a></td>
+        <td>Recommendation Systems<br>Object Oriented System Development</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118018>Venkata Ramanan M</a></td>
+        <td>Performance Optimization of Industrial Utilities<br>Demand Side Management<br>Techno Economic Feasibility Analysis</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117733>Vetriselvan K</a></td>
+        <td>Effluent Treatment<br>Nano Particle Applications in Environment<br>Environmental<br>Studies<br>Water Pollution</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117746>Vetriselvi V</a></td>
+        <td>Mobile Computing<br>Network Security</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117950>Victor Jaya N</a></td>
+        <td>High Pressure Physics<br>Nanomaterials and Lasers</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/36603>Vidhya R</a></td>
+        <td>Remote Sensing</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/57361>Vidjeapriya R</a></td>
+        <td>Prefabricated Structures<br>Earthquake Resistant Structures<br>Concrete Technology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117863>Vidya K</a></td>
+        <td>Inter Domain Routing<br>Security in Inter Domain Routing<br>Performance Analysis<br>Wireless Networks</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117943>Vidya R</a></td>
+        <td>Computational Condensed Matter Physics<br>Density Functional Theory<br>Materials for Energy and Medical Applications</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117958>Vidyalakshmi Y</a></td>
+        <td>Materials Science</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/118001>Vijay Kirubhakar Raj D</a></td>
+        <td>Garment Construction<br>CAD<br>Fashion Design</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117799>Vijaya N</a></td>
+        <td>Analog VLSI<br>Digital VLSI</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117901>Vijayakarthick M</a></td>
+        <td>Process Control</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117795>Vijayalakshmi M</a></td>
+        <td>Control Systems in Renewable Energy</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117876>Vijayalakshmi M</a></td>
+        <td>Mobile Databases<br>Mobile and Cloud Computing<br>Web Technology<br>Programming Languages and Algorithms</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117931>Vijayalakshmi V</a></td>
+        <td>Graph Theory and Combinatorics</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/22879>Vijayaraju P</a></td>
+        <td>Fuzzy Set Theory<br>Functional Analysis<br>Non-Linear Functional Analysis</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117924>Vijayashree K V</a></td>
+        <td>Stochastic Processes</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117920>Vimala P</a></td>
+        <td>Fluid Dynamics<br>Tribology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117928>Vimala Ramani</a></td>
+        <td>Algebraic Topology</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117892>Vinoth N</a></td>
+        <td>Biomedical Engineering</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117972>Vipinendran K</a></td>
+        <td>Printing Design<br>Print Management<br>Creativity and Innovation</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117947>Vishista K</a></td>
+        <td>Advanced Ceramics and Composite Materials</td>
+        </tr>
+        <tr>
+        <td><a href=https://annauniv.irins.org/profile/117866>Yogesh P</a></td>
+        <td>Computer Networks<br>Mobile Computing<br>Multimedia Communication<br>Web Technology</td>
+        </tr>
+        
+
+  </table>
+  <script data-config>
+
+    
+function filter(evt) {
+
+      var frm = document.forms[0];
+      //var slcCols = frm.slcColumns;
+      //var slcOperators = frm.slcOperators;
+      var slcOperators = "*";
+      //console.log(slcOperators.value)
+      var inp = frm.inpSearch;
+      var inpv = inp.value;
+      //console.log(inpv)
+      var query = slcOperators  + inpv;
+      //console.log(query);
+
+      // Set the column's filter value
+      tf.setFilterValue(0, query);
+
+      // Filter the table
+      tf.filter();
+
+      // Prevent form submission
+      evt.preventDefault();
+    }
+
+    var filtersConfig = {
+      base_path: 'tablefilter/',
+      highlight_keywords: true,
+      single_filter: {
+        exclude_cols: [1],
+        css_class: 'form-control',
+      },
+      //help_instructions: true,
+      filters_row_index: 1,
+      state: false,
+      alternate_rows: true,
+      msg_filter: 'Search...',
+      no_results_message: {
+        content: 'The name you entered does not correspond to a faculty in Anna University as per our database',
+      },
+      extensions:[ // Extensions load addititional script files
+      {
+            name: 'filtersVisibility',
+            visible_at_start: false,
+            target_id: 'filtersToggle',
+            btn_html: '<button>Toggle filters<\/button>'
+        },
+        { name: 'sort' } // Sort requires to classify numeric columns using "col_types : [ 'numeric', String', ...],"
+      ],
+    };
+    var tf = new TableFilter(document.querySelector('.aoi-table'),filtersConfig);
+    tf.init();
+    //var feature = tf.feature('dropdown');
+    //feature.refreshAll();
+
+  </script>
+
+</body>
+
+</html>
