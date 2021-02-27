@@ -8,7 +8,7 @@
   <meta name="viewport" content="initial-scale=1" />
   <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
   <link rel="stylesheet" href="css/latex.css" />
-  <title>Anna University Chennai Research Ranking</title>
+  <title>Research Profile of Anna University as extracted from the IRINS data base</title>
   <style>
     .row {
       display: flex;
@@ -28,752 +28,104 @@
 
 <body>
   <header style="text-align: center;">
-    <h2>Analysis and Quantification of the R&D strengths of different Areas and different Faculty Members in a
-      University</h2>
-    <em>An investigation taken up by the AU-KBC Centre and its preliminary Results</em>
-    <br>
-    <br>
-    <strong>C N Krishnan and S Senthil Anand</strong>
-  </header>
-
-  <!-- <details class="cb-toc"> -->
-  <summary>
-    <h4>Table of Contents<h4>
-        <ol>
-          <li><a href="#part1">The Problem Statement</a></li>
-          <li><a href="#part2">The Computational Model and the Tool</a></li>
-          <li><a href="#part3">Obtaining the R&D Profile of a university using the IRINS database</a></li>
-          <li><a href="#part4">Some preliminary results for Anna University</a></li>
-        </ol>
-  </summary>
-
-  <!-- </details> -->
-
-  <article style="text-align: justify;">
-    <h3 style="text-align: center;"><em>Abstract</em></h3>
-    <p><em>It is often very difficult to get accurate and authentic information regarding the research strengths of the
-        different faculty members as well as of the different specialised R&D areas in a university, especially large
-        public universities.
-        A computational model and a software tool are proposed here that can be interrogated to yield the required
-        information for
-        universities or other similar institutions. The core of the model is a way of computing the relative R&D score
-        <strong>s(i,j)</strong>
-        for a faculty member <strong>i</strong> in a given area <strong>j</strong> taking into account his/her different
-        contributions like publications, theses,
-        patents, funded activities etc. in that area. The results can be organised to rank faculty members,
-        departments/centres,
-        areas of specialisation etc in the university as per their relative R&D strengths. Clusters of related and
-        connected R&D areas
-        can be identified, along with the faculty members who are active in them, and these clusters can be made the
-        units for planning
-        future directions of research, in place of, or in addition to, just the departments and centres of the
-        university. Some preliminary
-        results of this ongoing investigation using the publicly available IRINS Database (<a
-          href="https://irins.org/irins/">https://irins.org/irins/</a>) are presented.</em></p>
-  </article>
-
-  <header style="text-align: center;" id="part1">
-    <h3><em>I. The Problem Statement</em></h3>
+    <h2>Research Profile of Anna University as extracted from the IRINS data base</h2>
   </header>
 
   <article style="text-align: justify;">
-    <p>Unlike an industrial R&D Lab, there is not much top-down regulation in a university as to who works in what
-      areas of research
-      - the common practice is that faculty members from a number of departments work on a given topic,
-      the same faculty member contributes to more than one topic, which also changes with time, etc.
-      There is practically no way for the university administration to find answers to queries like the following
-      that they are often faced with :</p>
-
-    <ul>
-      <li>Which are the top ten strongest areas of R&D in the university and how are they ranked?</li>
-      <li>Who are the top ten or twenty researchers in the university in terms of their R&D strengths, and how are
-        they ranked?</li>
-      <li>In terms of their R&D strengths, which are the top 5 Departments/Centres in the university, and how are
-        they ranked?</li>
-      <li>How have the above pictures been changing over time, and what are the predictions for the next 5-10
-        years?</li>
-      <li>etc.</li>
-    </ul>
-
-    <p>As is well known, a number of items go into deciding the R&D strength of a faculty member in a given area of
-      specialisation, such as</p>
-
-    <ul>
-      <li>number and quality of research publications in that area</li>
-      <li>number and quality of research theses supervised in that area</li>
-      <li>externally funded activities taken up in that area, such as sponsored projects, consultancy, training,
-        testing etc.</li>
-      <li>patents and other IP s obtained and licensed out in that area</li>
-      <li>national/international research collaborations/networks established in that area</li>
-      <li>high quality conferences conducted in that area</li>
-      <li>specialised courses developed and taught in that area</li>
-      <li>etc.</li>
-    </ul>
-
-    <p>The only organised source of information that is normally available are the Annual Reports submitted by the
-      Departments/Centres
-      to the university administration that would contain some of this information, but in a raw, unprocessed
-      form, and the quality
-      dimension being mostly not present in them. These alone are woefully insufficient for the administration and
-      management to
-      accurately project the strengths of the university to outside entities like the governments, industry, user
-      agencies,
-      potential collaborators and funders etc. , as well take steps to internally rectify the visible weaknesses.
-    </p>
-
-    <p>A need therefore exists to have a computational model and a software tool using Data Mining, Machine Learning
-      and other AI-based
-      approaches that when interrogated can yield answers to the kind of queries raised in the beginning of this
-      page.
-      It should ideally provide output such as the ones shown below for a given university:
-    </p>
-
+    <p><em>Some preliminary results of an analysis carried out of the R&D profile of
+        University Departments of Anna University is presented here that gives an overview
+        of the research being done by the faculty in the various areas of engineering,
+        sciences, mathematics and humanities. This is still a work in progress and
+        would be continuously enhanced and updated.</em></p>
   </article>
-
-  <article>
-    <div style="text-align: center;">
-      <fieldset>
-        <legend style="text-align: left"><strong>XXX University -- Ranking of research areas</strong>
-        </legend>
-        <svg height="140" width="140">
-          <circle cx="70" cy="70" r="68" stroke="black" stroke-width="2" fill="#003f5c" />
-          <text x="50%" y="50%" text-anchor="middle" fill="#fff" dy=".3em">
-            Area - 1
-          </text>
-        </svg>
-
-        <svg height="140" width="140">
-          <circle cx="70" cy="70" r="68" stroke="black" stroke-width="2" fill="#003f5c" />
-          <text x="50%" y="50%" text-anchor="middle" fill="#fff" dy=".3em">
-            Area - 2
-          </text>
-        </svg>
-        <hr>
-
-        <svg height="120" width="120">
-          <circle cx="60" cy="60" r="58" stroke="black" stroke-width="2" fill="#5e3f72" />
-          <text x="50%" y="50%" text-anchor="middle" fill="#fff" dy=".3em">
-            Area - 3
-          </text>
-        </svg>
-        <svg height="120" width="120">
-          <circle cx="60" cy="60" r="58" stroke="black" stroke-width="2" fill="#5e3f72" />
-        </svg>
-        <svg height="120" width="120">
-          <circle cx="60" cy="60" r="58" stroke="black" stroke-width="2" fill="#5e3f72" />
-        </svg>
-        <svg height="120" width="120">
-          <circle cx="60" cy="60" r="58" stroke="black" stroke-width="2" fill="#5e3f72" />
-          <text x="50%" y="50%" text-anchor="middle" fill="#fff" dy=".3em">
-            Area - 6
-          </text>
-        </svg>
-        <svg height="120" width="120">
-          <circle cx="60" cy="60" r="58" stroke="black" stroke-width="2" fill="#5e3f72" />
-        </svg>
-        <hr>
-
-        <svg height="90" width="90">
-          <circle cx="45" cy="45" r="43" stroke="black" stroke-width="2" fill="#a03a4d" />
-        </svg>
-        <svg height="90" width="90">
-          <circle cx="45" cy="45" r="43" stroke="black" stroke-width="2" fill="#a03a4d" />
-        </svg>
-        <svg height="90" width="90">
-          <circle cx="45" cy="45" r="43" stroke="black" stroke-width="2" fill="#a03a4d" />
-          <text x="50%" y="50%" text-anchor="middle" fill="#fff" dy=".3em">
-            Area - 10
-          </text>
-        </svg>
-        <svg height="90" width="90">
-          <circle cx="45" cy="45" r="43" stroke="black" stroke-width="2" fill="#a03a4d" />
-        </svg>
-        <svg height="90" width="90">
-          <circle cx="45" cy="45" r="43" stroke="black" stroke-width="2" fill="#a03a4d" />
-        </svg>
-        <svg height="90" width="90">
-          <circle cx="45" cy="45" r="43" stroke="black" stroke-width="2" fill="#a03a4d" />
-        </svg>
-        <svg height="90" width="90">
-          <circle cx="45" cy="45" r="43" stroke="black" stroke-width="2" fill="#a03a4d" />
-        </svg>
-        <hr>
-
-        <svg height="60" width="60">
-          <circle cx="30" cy="30" r="28" stroke="black" stroke-width="2" fill="#9a6400" />
-        </svg>
-        <svg height="60" width="60">
-          <circle cx="30" cy="30" r="28" stroke="black" stroke-width="2" fill="#9a6400" />
-        </svg>
-        <svg height="60" width="60">
-          <circle cx="30" cy="30" r="28" stroke="black" stroke-width="2" fill="#9a6400" />
-        </svg>
-        <svg height="60" width="60">
-          <circle cx="30" cy="30" r="28" stroke="black" stroke-width="2" fill="#9a6400" />
-        </svg>
-        <svg height="60" width="60">
-          <circle cx="30" cy="30" r="28" stroke="black" stroke-width="2" fill="#9a6400" />
-        </svg>
-        <svg height="60" width="60">
-          <circle cx="30" cy="30" r="28" stroke="black" stroke-width="2" fill="#9a6400" />
-        </svg>
-        <svg height="60" width="60">
-          <circle cx="30" cy="30" r="28" stroke="black" stroke-width="2" fill="#9a6400" />
-        </svg>
-        <svg height="60" width="60">
-          <circle cx="30" cy="30" r="28" stroke="black" stroke-width="2" fill="#9a6400" />
-        </svg>
-        <svg height="60" width="60">
-          <circle cx="30" cy="30" r="28" stroke="black" stroke-width="2" fill="#9a6400" />
-        </svg>
-        <svg height="60" width="60">
-          <circle cx="30" cy="30" r="28" stroke="black" stroke-width="2" fill="#9a6400" />
-        </svg>
-
-        <br>
-        <br>
-        <span style="text-align: left;">
-          <p>The size of the circle indicates the relative strengths of the research areas.</p>
-          <ol>
-            <li>Level -1: <strong>Areas in the top&nbsp10%</strong> of the ranking --
-              <svg width="100" height="20">
-                <rect width="100" height="20" style="fill:#003f5c;stroke-width:1;stroke:rgb(0,0,0)" />
-              </svg>
-            </li>
-            <li>Level -1: <strong>Areas in the 80 - 89%</strong> of the ranking --
-              <svg width="100" height="20">
-                <rect width="100" height="20" style="fill:#5e3f72;stroke-width:1;stroke:rgb(0,0,0)" />
-              </svg>
-            </li>
-            <li>Level -1: <strong>Areas in the 70 - 79%</strong> of the ranking --
-              <svg width="100" height="20">
-                <rect width="100" height="20" style="fill:#a03a4d;stroke-width:1;stroke:rgb(0,0,0)" />
-              </svg>
-            </li>
-            <li>Level -1: <strong>Areas in the 60 - 69%</strong> of the ranking --
-              <svg width="100" height="20">
-                <rect width="100" height="20" style="fill:#9a6400;stroke-width:1;stroke:rgb(0,0,0)" />
-              </svg>
-            </li>
-          </ol>
-        </span>
-
-      </fieldset>
-    </div>
-  </article>
-
-  <br>
-  <br>
-
-  <article>
-    <div style="text-align: center;">
-      <fieldset>
-        <legend style="text-align: left"><strong>XXX University – Ranking of researchers</strong>
-        </legend>
-        <svg height="140" width="140">
-          <circle cx="70" cy="70" r="68" stroke="black" stroke-width="2" fill="#003f5c" />
-          <text x="50%" y="50%" text-anchor="middle" fill="#fff" dy=".3em">
-            Faculty 1
-          </text>
-        </svg>
-
-        <svg height="140" width="140">
-          <circle cx="70" cy="70" r="68" stroke="black" stroke-width="2" fill="#003f5c" />
-          <text x="50%" y="50%" text-anchor="middle" fill="#fff" dy=".3em">
-            Faculty 2
-          </text>
-        </svg>
-        <hr>
-
-        <svg height="120" width="120">
-          <circle cx="60" cy="60" r="58" stroke="black" stroke-width="2" fill="#5e3f72" />
-          <text x="50%" y="50%" text-anchor="middle" fill="#fff" dy=".3em">
-            Faculty 3
-          </text>
-        </svg>
-        <svg height="120" width="120">
-          <circle cx="60" cy="60" r="58" stroke="black" stroke-width="2" fill="#5e3f72" />
-        </svg>
-        <svg height="120" width="120">
-          <circle cx="60" cy="60" r="58" stroke="black" stroke-width="2" fill="#5e3f72" />
-        </svg>
-        <svg height="120" width="120">
-          <circle cx="60" cy="60" r="58" stroke="black" stroke-width="2" fill="#5e3f72" />
-          <text x="50%" y="50%" text-anchor="middle" fill="#fff" dy=".3em">
-            Faculty 6
-          </text>
-        </svg>
-        <svg height="120" width="120">
-          <circle cx="60" cy="60" r="58" stroke="black" stroke-width="2" fill="#5e3f72" />
-        </svg>
-        <hr>
-
-        <svg height="90" width="90">
-          <circle cx="45" cy="45" r="43" stroke="black" stroke-width="2" fill="#a03a4d" />
-        </svg>
-        <svg height="90" width="90">
-          <circle cx="45" cy="45" r="43" stroke="black" stroke-width="2" fill="#a03a4d" />
-        </svg>
-        <svg height="90" width="90">
-          <circle cx="45" cy="45" r="43" stroke="black" stroke-width="2" fill="#a03a4d" />
-          <text x="50%" y="50%" text-anchor="middle" fill="#fff" dy=".3em">
-            Faculty 10
-          </text>
-        </svg>
-        <svg height="90" width="90">
-          <circle cx="45" cy="45" r="43" stroke="black" stroke-width="2" fill="#a03a4d" />
-        </svg>
-        <svg height="90" width="90">
-          <circle cx="45" cy="45" r="43" stroke="black" stroke-width="2" fill="#a03a4d" />
-        </svg>
-        <svg height="90" width="90">
-          <circle cx="45" cy="45" r="43" stroke="black" stroke-width="2" fill="#a03a4d" />
-        </svg>
-        <svg height="90" width="90">
-          <circle cx="45" cy="45" r="43" stroke="black" stroke-width="2" fill="#a03a4d" />
-        </svg>
-        <hr>
-
-        <svg height="60" width="60">
-          <circle cx="30" cy="30" r="28" stroke="black" stroke-width="2" fill="#9a6400" />
-        </svg>
-        <svg height="60" width="60">
-          <circle cx="30" cy="30" r="28" stroke="black" stroke-width="2" fill="#9a6400" />
-        </svg>
-        <svg height="60" width="60">
-          <circle cx="30" cy="30" r="28" stroke="black" stroke-width="2" fill="#9a6400" />
-        </svg>
-        <svg height="60" width="60">
-          <circle cx="30" cy="30" r="28" stroke="black" stroke-width="2" fill="#9a6400" />
-        </svg>
-        <svg height="60" width="60">
-          <circle cx="30" cy="30" r="28" stroke="black" stroke-width="2" fill="#9a6400" />
-        </svg>
-        <svg height="60" width="60">
-          <circle cx="30" cy="30" r="28" stroke="black" stroke-width="2" fill="#9a6400" />
-        </svg>
-        <svg height="60" width="60">
-          <circle cx="30" cy="30" r="28" stroke="black" stroke-width="2" fill="#9a6400" />
-        </svg>
-        <svg height="60" width="60">
-          <circle cx="30" cy="30" r="28" stroke="black" stroke-width="2" fill="#9a6400" />
-        </svg>
-        <svg height="60" width="60">
-          <circle cx="30" cy="30" r="28" stroke="black" stroke-width="2" fill="#9a6400" />
-        </svg>
-        <svg height="60" width="60">
-          <circle cx="30" cy="30" r="28" stroke="black" stroke-width="2" fill="#9a6400" />
-        </svg>
-
-        <br>
-        <br>
-        <span style="text-align: left;">
-          <p>The size of the circle indicates the relative strengths of the faculty.</p>
-          <ol>
-            <li>Level -1: <strong>Areas in the top&nbsp10%</strong> of the ranking --
-              <svg width="100" height="20">
-                <rect width="100" height="20" style="fill:#003f5c;stroke-width:1;stroke:rgb(0,0,0)" />
-              </svg>
-            </li>
-            <li>Level -1: <strong>Areas in the 80 - 89%</strong> of the ranking --
-              <svg width="100" height="20">
-                <rect width="100" height="20" style="fill:#5e3f72;stroke-width:1;stroke:rgb(0,0,0)" />
-              </svg>
-            </li>
-            <li>Level -1: <strong>Areas in the 70 - 79%</strong> of the ranking --
-              <svg width="100" height="20">
-                <rect width="100" height="20" style="fill:#a03a4d;stroke-width:1;stroke:rgb(0,0,0)" />
-              </svg>
-            </li>
-            <li>Level -1: <strong>Areas in the 60 - 69%</strong> of the ranking --
-              <svg width="100" height="20">
-                <rect width="100" height="20" style="fill:#9a6400;stroke-width:1;stroke:rgb(0,0,0)" />
-              </svg>
-            </li>
-          </ol>
-        </span>
-
-      </fieldset>
-    </div>
-  </article>
-  <br>
-
-  <header style="text-align: center;" id="part2">
-    <h3><em>II. The Computational Model and the Tool</em></h3>
-  </header>
-
 
   <article style="text-align: justify;">
-    <p>Here we outline of the computational model developed by us to compute the R&D strength of the university in a
-      given area, as well as the R&D strength of a given faculty member in all his/her areas of specialisation.</p>
-
-    <p>There are two major parts to this exercise:</p>
-
-    <h4 id="II.1"><em>1. Identifying which are the areas of specialisation that must be considered in a given
-        university.</em></h4>
-
-    <p>Typically a large university will have many hundreds of faculty members divided into scores of departments,
-      divisions,
-      centres etc, carrying out a variety of activities that go into making its R&D strength, as listed in the previous
-      section,
-      such as publications, theses, patents, funded R&D etc. What should a university take to be its areas of
-      specialisation
-      for the purpose of estimating its the R&D strength is a matter of considerable complexity, and this may not be the
-      same across all the universities. </p>
-
-    <p>To illustrate, in an engineering university, it wouldn't be enough to consider Civil, Electrical, Mechanical etc
-      to be
-      the areas of specialised R&D as they are too broad and coarse in granularity, each breaking down into many more
-      specialised
-      areas and sub areas. At another extreme, there may be just one or two faculty members working on a very narrow and
-      highly
-      specialised problem, and at the university level , these may not qualify to be listed as research areas of the
-      university as
-      they are too fine grained. What would be needed is an optimum level of granularity where the choice of areas of
-      specialisation is not too coarse to loose meaning or not too fine to loose usefulness.</p>
-
-    <p>Experts in the university have to deliberate and decide on this aspect based on the breadth and depth of R&D
-      being
-      carried out there. It is evident that certain areas that exist in one university may not exist in another, etc.
-    </p>
-
-    <p>Later in this report we explain how this problem is being addressed in this study for the present.</p>
-
-    <h4 id="II.2"><em>2. Deciding how the R&D strength of a faculty member or an area of specialisation is to be
-        computed.</em></h4>
-
-    <p>R&D strength in an area would have to take into account the different types of R&D outputs generated in that
-      area,
-      such as publications, theses, patents, etc, as listed in the previous section. Evidently, these can not be just a
-      numerical addition of all such items, as they all have different units and dimensions, as well as different levels
-      of importance in contributing to the final calculated R&D strength. To illustrate, it has to be decided how much
-      importance publications should be given in the calculation of R&D strength, as compared to say R&D grants brought
-      in,
-      patents taken, etc. That is, there has to a “weight” assigned to each type of contributions that go into the
-      calculation of the R&D strength, and this would reflect what the university considers to be the relative
-      importance
-      of different types of contributions – some may consider publications to be more importance than R&D grants,
-      where as some others may do the opposite, etc.</p>
-
-    <p>Even when the weights for different types of contributions have been agreed up on, how the contributions have to
-      be quantified and calculated for a given type is another issue to be decided. Taking the example of publications
-      again, the value of contribution assigned to this type can not just be the total number of publications;
-      the 'quality' of the journals or conferences where they were published (say the h-index of the journal)
-      will also be very important in deciding the value of this contribution.</p>
-
-    <p>Similar considerations apply to deciding the relative importance of all other types of R&D contributions that
-      go into deciding the relative R&D strength of an area of specialisation in the university, or of
-      a faculty member of the university in an area.</p>
-
-    <p>We have built the model for computing the R&D strength in a university through defining a factor
-      <strong>s(i,j)</strong> as
-      being the R&D strength of the faculty member <strong>i</strong> in the area of specialisation <strong>j</strong>.
-      Contributions of various
-      types mentioned earlier by the faculty member <strong>i</strong> in the area <strong>j</strong> are summed
-      together with appropriate ways
-      of quantification and weights. Details of this would be described elsewhere.
-    </p>
-
-    <p>The final R&D strength of the university in the area of specialisation <strong>j</strong>, <strong>S(j)</strong>
-      is obtained by summing <strong>s(i,j)</strong>
-      over all the faculty members <strong>i</strong> in the university, and similarly, the final R&D strength of the
-      faculty <strong>i</strong>
-      in all the areas of his/her specialisation, <strong>S(i)</strong> is got by summing <strong>s(i,j)</strong> over
-      all the areas <strong>j</strong>.</p>
-  </article>
-  <br>
-
-  <header style="text-align: center;" id="part3">
-    <h3><em>III. Obtaining the R&D Profile of a university using the IRINS database</em></h3>
-  </header>
-
-
-  <article style="text-align: justify;">
-    <p>Most universities do not have a centralised on line database of its faculty members and their profiles made
-      available over the web.
-      Faculty members however do maintain their personal webpages as a part of their Department/Centre websites,
-      and anyone wanting
-      to analyse the R&D profiles of the faculty members of the university has to go to these Department/Centre
-      websites and pull out
-      the required information from the individual faculty web pages available there. This is a very tedious
-      process, and
-      often the individual pages of many faculty members are also incomplete in many regards for our purposes.</p>
-
-    <h4><em>The IRINS Database:</em></h4>
-
-    <p>
-      IRINS <a href="https://irins.org/irins/">(https://irins.org/irins/)</a> is a web-based Research Information
+    <p>IRINS <a href="https://irins.org/irins/">(https://irins.org/irins/)</a> is a web-based Research Information
       Management (RIM)
-      service developed recently by the Information and Library Network(INFLIBNET) Centre Delhi in collaboration
-      with the Central
-      University of Punjab. Anna University has populated the template supplied by IRINS with data of
-      about 500 of its regular faculty, and is available at <a
-        href="https://annauniv.irins.org/">https://annauniv.irins.org/</a>
-    </p>
+      service developed recently by the Information and Library Network (INFLIBNET) in
+      collaboration with the Central University of Punjab. Anna University has populated
+      the template supplied by IRINS with data of about 500 of its regular faculty,
+      and the same is available at <a href="https://annauniv.irins.org/">https://annauniv.irins.org/</a></p>
 
     <p>
-      Nearly 250 universities and institutes in India (Central government, State government as well as Private)
-      have
-      created their own versions of IRINS data bases, and this to our knowledge represents only one such
-      instance that is available for public viewing and access at present.
+      One of the information provided by the faculty members in the database is about the topics
+      in which they are specialising, and in all we have identified 956 such distinct <span
+        style="text-decoration: underline">topics</span>
+      of specialisation for Anna University, belonging to 3 broad <span
+        style="text-decoration: underline">domains</span>:
     </p>
 
-    <p>
-      Even though there is provision to add more fields as desired by the individual faculty members,
-      most of the IRINS websites of universities have chosen to have only a few fields populated;
-      in case of Anna University, only the following fields have been filled up by most of the 500 faculty
-      members:
-    </p>
-    <ul>
-      <li>Personal Information</li>
-      <li>Expertise</li>
-      <li>Experience</li>
-      <li>Educational Qualifications</li>
-      <li>Publications</li>
-    </ul>
-
-    <p>
-      List of Publications however looks quite incomplete as well as defective in many cases and may not be much
-      usable as it is. More importantly, the following information is not available in most cases, which are
-      essential for our purpose of computing R&D strength as discussed earlier:
-    </p>
-    <ul>
-      <li>Externally funded activities taken up such as Sponsored R&D, Consultancy, Training etc.</li>
-      <li>Titles of Ph. D. Theses supervised</li>
-      <li>Technologies/ IP s/ Patents produced</li>
-      <li>Conferences Organised</li>
-      <li>Networking & Collaborations</li>
-      <li>Specialised Courses taught</li>
-      <li>etc.</li>
-    </ul>
-
-    <p>
-      Thus, the IRINS database in the form as presently available in many cases such as Anna University is still
-      quite removed from the comprehensive ones needed as mentioned earlier, though it is a good beginning
-      and could be improved up on by interested institutions.</p>
-
-    <p>
-      For our purpose of computing the R&D strengths, the “Areas of Expertise” field filled up by the faculty
-      members in IRINS is quite useful and usable directly. This is where the faculty members enter their
-      broad areas of activity (“Aerospace”) as well as specialised R&D areas (“Propulsion”), and as mentioned
-      in <a href="#II.1">(II)(1)</a> above, these entries provide a very good starting point to identify
-      the
-      Areas of Specialisation that would be relevant to a given university.
-    </p>
-
-    <h4><em>Use of the IRINS Database for Anna University:</em></h4>
-
-    <p>
-      After a preliminary clean-up of the IRINS data (taking care of singular/plural, acronyms, morphed phrases
-      etc)
-      a total of 956 distinct names of R&D areas (Topics of Specialistion) were identified for Anna University
-      faculty
-      from the IRINS data base, as supplied by about 500 faculty members. (The number of areas mentioned by one
-      faculty
-      varies hugely, from 2 to 7-8). These 956 items were divided into three broad Domains as below as felt
-      appropriate for Anna University, shown along with the number of topics of specialisation for each domain:
-    </p>
-    <ol>
-      <li>Electrical and Computing Sciences (E&C): 292 topics</li>
-      <li>Non- E&C: 542 topics</li>
-      <li>Mathematics, Sciences & Humanities, and Management (MSHM): 122 topics</li>
-    </ol>
-
-    <p>
-      The major exercise involved next was the clustering of these 956 items into a set of Clusters or Areas of
-      Specialisation,
-      the number of such sets being neither too large (dividing items that should be in one set into many sets;
-      too fine a
-      granularity), nor too small ( set including items that should in reality belong to other sets; too coarse a
-      granularity).
-      It requires good domain knowledge to know which items in the list of 956 topics belong to a particular
-      cluster or area of
-      specialisation, and can be done either manually or through a Machine Learning (ML) approach, or in a hybrid
-      manner
-      combining these two methods. Since 956 items is still relatively small, the manual approach was chosen here
-      initially
-      to validate the key ideas behind this investigation, and ML approach would be developed later and reported
-      here.
-    </p>
-
-    <p>
-      Even in the manual approach used here, experts from different domains are needed to correctly assign the 956
-      items
-      (topics of specialisation) into appropriate set of clusters (areas of specialisation). This process however
-      has
-      large time and cost implications, and so for demo purposes here the authors have carried out the clustering
-      task
-      on their own based on their understanding of the domains involved. It is thus likely to turn out that the
-      number
-      and choice of clusters given here are more appropriate to the domain of E&C rather than the other two
-      domains.
-      This is only to validate the key ideas behind this pilot study, and a more detailed and accurate approach
-      involving other experts is needed to make these results more accurate and meaningful.
-    </p>
-
-    <p>
-      Looking through the list of items in each of the three broad domains identified above, we divided them into
-      41 clusters or areas of specialisation as below:
-    </p>
 
     <ol type="A">
-      <li>
-        E&C Domain: 10 areas or clusters as below -
-        <ul>
-          <li>AI/ML</li>
-          <li>Cloud/Grid Computing</li>
-          <li>Communications</li>
-          <li>Computers</li>
-          <li>Electronics</li>
-          <li>Instrumentation/Control /Automation</li>
-          <li>Networks</li>
-          <li>Power & High Voltage</li>
-          <li>Signal/Image Processing</li>
-          <li>VLSI</li>
-        </ul>
-      </li>
-      <li>
-        Non-E&C Domain: 28 areas or clusters as below -
-        <ul>
-          <li>Aerospace</li>
-          <li>Alternate Energy</li>
-          <li>Architecture</li>
-          <li>Automobiles</li>
-          <li>Biomedical Engineering</li>
-          <li>Biotechnology</li>
-          <li>Cancer Biology & Cardiovascular System</li>
-          <li>Ceramics</li>
-          <li>Chemical Engineering</li>
-          <li>Civil</li>
-          <li>Composite Materials</li>
-          <li>Engineering Design</li>
-          <li>Environment</li>
-          <li>Heat Power</li>
-          <li>Manufacturing</li>
-          <li>Material Science -- Applications</li>
-          <li>Material Science -- Characterization & Properties</li>
-          <li>Mining</li>
-          <li>Nanotechnology</li>
-          <li>Others</li>
-          <li>Polymers</li>
-          <li>Printing</li>
-          <li>Production</li>
-          <li>Refrigeration and Air Conditioning</li>
-          <li>Remote Sensing and GIS</li>
-          <li>Textiles</li>
-          <li>Water</li>
-          <li>Water Pollution and Wastewater Treatment</li>
-        </ul>
-      </li>
-      <li>
-        Maths, Sciences & Humanities and Management Domains: 3 areas or clusters as below -
-        <ul>
-          <li>Mathematics</li>
-          <li>Sciences & Humanities</li>
-          <li>Management</li>
-        </ul>
-      </li>
+      <li>Engineering: Electrical and Computing Sciences (E&C)</li>
+      <li>Engineering: Non- E&C areas</li>
+      <li>Mathematics, Sciences & Humanities, and Management</li>
     </ol>
 
     <p>
-      The organisation of information used in this study is thus as follows:
-    </p>
-  </article>
-
-  <article>
-    <div style="text-align: center;">
-      <h4>3 Domains</h4>
-      <figure>
-        <img src="images/down.png" width="5%">
-      </figure>
-      <h4>41 Clusters or Areas of Specialisation</h4>
-      <figure>
-        <img src="images/down.png" width="5%">
-      </figure>
-      <h4>956 Topics of Specialisation</h4>
-    </div>
-  </article>
-
-  <br>
-
-  <header style="text-align: center;" id="part4">
-    <h3><em>IV. Some preliminary results for Anna University</em></h3>
-  </header>
-  <article style="text-align: justify;">
-
-    <p>
-      Some preliminary results of our work done so far are given <a href="analysis/index.html">here</a>
-      where the 41 areas are arranged into three layers according to the number of faculty involved in each of
-      them, as
-      below:
+      Through a first cut manual process, we have grouped the 956 topics into 41 clusters or
+      <span style="text-decoration: underline">areas</span> of specialisation –
+      10 belonging to E&C Sciences domain, 28 belonging to non-E&C domain and
+      3 belonging to Maths, Sciences & Humanities and Management Domains. While
+      the Domains (3) are too broad and Topics (956) are too narrow, the Areas (41)
+      are believed to be of optimum granularity and size for meaningful understanding
+      and interpretation of the R&D activities being carried out by the faculty of Anna University.
     </p>
 
     <p>
-      <em>Top layer:</em> Areas having Faculty strength above 50 each (the maximum is seen to be 70)<br>
-      <em>Middle layer:</em> Faculty strength in the range 26 to 50<br>
-      <em>Bottom layer:</em> Faculty strength in the range 1 to 25 (the lowest is 4)<br>
+      Some preliminary results of the analysis are given here in two forms:
     </p>
 
     <p>
-      Each of the 3 broad domains (A,B and C) is shown in one colour.
-
+      <strong style="text-decoration: underline">1. The Clusters.</strong> The 41 clusters (areas of specialisation),
+      along with the constituents
+      of each of them are available <a href="analysis/index.html">here</a> where clusters are arranged into 3
+      layers according to the number of faculty involved in each of them.
+      Also each of the 3 broad domains (A,B and C) is shown in one colour:
     </p>
 
     <p>
       <span style="color:#813762"><strong>A. Electrical & Computing (E&C) Sciences</strong>
-        <!--         <svg width="100" height="14">
-          <rect width="100" height="14" style="fill:#813762;stroke-width:1;stroke:rgb(0,0,0)" />
-      </svg> -->
       </span><br>
       <span style="color:#003f5c"><strong>B. Non-E&C areas</strong>
-<!--         <svg width="100" height="14">
-          <rect width="100" height="14" style="fill:#003f5c;stroke-width:1;stroke:rgb(0,0,0)" />
-        </svg> -->
       </span><br>
       <span style="color:#905e00"><strong>C. Maths, Sciences, Management & Humanities</strong>
-<!--         <svg width="100" height="14">
-          <rect width="100" height="14" style="fill:#905e00;stroke-width:1;stroke:rgb(0,0,0)" />
-        </svg> -->
       </span><br>
     </p>
 
-    <p> The size of the circle is proportional
-      to the logarithm of the faculty strength, making the circle having the largest number the biggest, and
-      the circle having the least number of faculty as the smallest. On clicking the circles, details of their
-      sub areas (topics) and faculty list are displayed, with the faculty names being linked to their IRINS
-      database entries.
+    <p>
+      The size of the circle is proportional to the logarithm of the faculty strength.
+      On clicking the circles, details of their sub areas (topics) and associated
+      faculty list are displayed, with the faculty names being linked to their IRINS database entries.
     </p>
 
     <p>
-      There is also a provision made for searching for a required topic of specialisation by clicking
-      <a href="analysis/search.html">here</a> which returns
-      the list of faculty members involved in that area, linked to their IRINS web pages.
-      The search facility here is still a work in progress
+      Examination of the cluster details (such as AI, Composites, Automation etc.) clearly
+      shows how the existing departments/centres division do not any more represent research
+      specialisations, with each area of specialisation having faculty from 8-10 different
+      departments/centres, spread across different university campuses. Planning and Organisation
+      of R&D in the university may have to be conceived around these clusters instead.
     </p>
 
     <p>
-      It is emphasised here again that these results are shown only as a PoC, and considerably more work
-      needs to be done to make it more effective and useful. For instance, areas like Chemical Engineering and
-      Civil Engineering are really not specialisations (as in the sense of Mining or Grid/Cloud Computing), and these
-      will have to be examined as to how and where the items under them can be re-assigned to
-      existing Areas of specialisations, or to new Areas of specialisations. When this exercise is carried out,
-      it is possible that the Areas of Specialisation (or Clusters) would go up from the present 41 to
-      closer to 50. This should be thus be treated as a work in progress.
+      <strong style="text-decoration: underline">2. The Search Facility</strong> Search can
+      be carried out <a href="analysis/search.html">here</a> , either by names of the topics
+      or by faculty names. In place of searching, the 956 topics have also been listed here
+      alphabetically which can be scrolled down to the desired one and see the faculty involved.
     </p>
 
     <p>
-      Also, ordering the Areas (Clusters) in terms of their faculty strengths as shown in the figure is
-      not particularly useful since more faculty does not necessarily mean higher R&D strengths.
-      R&D strengths of different Areas (Clusters) have to be computed using the methods suggested in
-      <a href="#part2">Section II</a> above, and then ranked accordingly. Unfortunately, IRINS database is not of much
-      use
-      in this regard as mentioned earlier. This will have to be done afresh using techniques of web crawling,
-      information extraction etc from the primary sources of information available elsewhere for the
-      common metrices like Publications, Research Grants, Patents, Theses, etc. This matter is presently being explored
-      further.
+      Both the clustering and the search facilities are presently being further automated and
+      enhanced, and the improved results will be posted here from time to time.
+    </p>
+
+    <p>
+      <small>
+        <strong><em>This work was contributed by the AU-KBC Research Centre , and further enquiries
+            about the same may be sent to <a href="mailto: cnkrish@gmail.com">cnkrish@gmail.com</a></em></strong>
+      </small>
     </p>
   </article>
-
   <br>
 </body>
 
